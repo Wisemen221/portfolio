@@ -1,0 +1,72 @@
+//side nav layout
+.nav_wrapper
+    padding-left: 1.875rem
+    max-width: 12.8125rem
+    width: 100%
+    height: 100%
+    .logo_wrapper
+        padding: 2.3125rem 0 1.84375rem 0.375rem
+    .side_nav
+        .menu_title
+            padding-bottom: 1.4375rem
+            h3
+                font-size: 0.9375rem
+                font-weight: 500
+                margin: 0
+                color: $text_shade
+                cursor: default
+        ul
+            margin: 0
+            padding: 0
+            .menu_links:nth-child(2), .menu_links:nth-child(3), .menu_links:nth-child(4)
+                margin-top: 1.41875rem
+            .menu_links
+                list-style: none
+                a
+                    display: flex
+                    align-items: center
+                    font-size: 0.9375rem
+                    font-weight: 500
+                    color: $text_shade
+                    transition: all 0.4s
+                    .menu_icon_box
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        border-radius: 9px
+                        margin-right: 1.0625rem
+                        width: 1.875rem
+                        height: 1.875rem
+                        font-size: 13px
+                        background-color: $background_links
+                        transition: all 0.4s
+                    &:hover .projects
+                        background-color: $project_link
+                        color: $white
+                    &:hover .about
+                        background-color: $about_link
+                        color: $white
+                    &:hover .skills
+                        background-color: $skills_link
+                        color: $white
+                    &:hover .contact
+                        background-color: $contact_link
+                        color: $white
+                    &:hover
+                        color: $white
+#home
+    color: $white
+    .projects
+        background-color: $project_link
+#about
+    color: $white
+    .about
+        background-color: $about_link
+#skills
+    color: $white
+    .skills
+        background-color: $skills_link
+#contact
+    color: $white
+    .contact
+        background-color: $contact_link

@@ -1,0 +1,94 @@
+//serach content layout
+.search_content_wrapper
+    width: 100%
+    height: 100%
+    background-color: $dark_background_color
+    border-radius: 1.25rem 0 0 0
+    padding: 1.46875rem 1.875rem 0 2.9375rem
+    h1
+        font-size: 1.875rem
+        font-weight: 600
+        margin: 0 0 0.5625rem 0
+        cursor: default
+    .search_wrapper
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-column-gap: 20px
+        grid-row-gap: 20px
+        .projects:nth-child(1) .project_image
+            background-color: $skills_link
+            background-image: url("../../assets/images/svg/blog.svg")
+            background-repeat: no-repeat, repeat
+            background-position: center
+            background-repeat: no-repeat
+            background-size: cover
+            background-size: 210%
+            transition: background-size 0.15s linear
+        .projects:nth-child(2) .project_image
+            background-color: $project_link
+            background-image: url("../../assets/images/svg/check_list.svg")
+            background-repeat: no-repeat, repeat
+            background-position: center
+            background-repeat: no-repeat
+            background-size: cover
+            background-size: 210%
+            transition: background-size 0.15s linear
+        .projects:nth-child(3) .project_image
+            background-color: $spinners_background
+            background-image: url("../../assets/images/svg/spinners.svg")
+            background-repeat: no-repeat, repeat
+            background-position: center
+            background-repeat: no-repeat
+            background-size: cover
+            background-size: 210%
+            transition: background-size 0.15s linear
+        .projects:nth-child(4) .project_image
+            background-color: $contact_link
+            background-image: url("../../assets/images/svg/flashcards.svg")
+            background-repeat: no-repeat, repeat
+            background-position: center
+            background-repeat: no-repeat
+            background-size: 210%
+            transition: background-size 0.15s linear
+        .projects:nth-child(4):hover .project_image, .projects:nth-child(3):hover .project_image, .projects:nth-child(2):hover .project_image, .projects:nth-child(1):hover .project_image,
+            background-size: 170%
+        .projects
+            position: relative
+            border-radius: 1.25rem
+            max-height: 16.5625rem
+            min-width: 12.5rem
+            width: 100%
+            height: 100%
+            background-color: $project_background
+            overflow: hidden
+            cursor: pointer
+            transform: perspective(1px) scale(0) translateZ(0) translateY(50px)
+            backface-visibility: hidden
+            -webkit-font-smoothing: subpixel-antialiased
+            opacity: 0
+            animation: fly_in 0.15s ease-in forwards
+            transition: all 0.15s ease-in
+            &:hover
+                transform: scale(1.05)
+                backface-visibility: hidden
+            .project_image
+                border-radius: 0.3125rem
+                width: 100%
+                height: 7.9375rem
+                display: block
+            h5
+                font-size: 1.1875rem
+                font-weight: 500
+                margin: 1rem 1.15625rem 1.125rem 1.15625rem
+            p
+                font-size: 0.875rem
+                font-weight: 500
+                margin: 0 0.71875rem 3.125rem 1.15625rem
+.search_flashcards
+    background-image: url("../../assets/images/svg/flashcards.svg") !important
+.search_spinners
+    background-image: url("../../assets/images/svg/spinners.svg") !important
+.search_check_list
+    background-image: url("../../assets/images/svg/check_list.svg") !important
+.search_blog
+    background-image: url("../../assets/images/svg/blog.svg") !important

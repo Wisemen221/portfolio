@@ -1,5 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import Project_details from '../views/Project_details.vue'
+import Featured_details from '../views/Featured_details.vue'
+import Search_results from '../views/Search_results.vue'
+import About from '../views/About.vue'
+import Skills from '../views/Skills.vue'
+import Contact from '../views/Contact'
+import Not_found from '../views/Not_found.vue'
 
 const routes = [
   {
@@ -8,12 +15,45 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
+    path: '/projects/:id',
+    name: 'Project_details',
+    component: Project_details,
+    props: true
+  },
+  {
+    path: '/featured_project/:id',
+    name: 'Featured_details',
+    component: Featured_details,
+    props: true
+  },
+  {
+    path: '/search_results',
+    name: 'Search_results',
+    component: Search_results
+  },
+  {
+    path: '/about/',
     name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: About,
+    props: true
+  },
+  {
+    path: '/skills/',
+    name: 'Skills',
+    component: Skills,
+    props: true
+  },
+  {
+    path: '/contact/',
+    name: 'Contact',
+    component: Contact,
+    props: true
+  },
+  //404 page
+  {
+    path: '/:catchAll(.*)',
+    name: 'Not_found',
+    component: Not_found
   }
 ]
 

@@ -1,0 +1,135 @@
+//project details layout
+.details_wrapper
+    width: 100%
+    height: 100%
+    background-color: $dark_background_color
+    border-radius: 1.25rem 0 0 0
+    padding: 1.46875rem 1.875rem 0 2.9375rem
+    .details_image
+        width: 100%
+        height: 24.625rem
+        border-radius: 1.25rem
+    .details_content
+        display: flex
+        width: 100%
+        .project_info_wrapper
+            max-width: 32.8125rem
+            width: 100%
+            .info_title
+                display: flex
+                justify-content: space-between
+                h2
+                    font-size: 2.5625rem
+                    font-weight: 500
+                    margin: 2.5625rem 0 0 0
+                    cursor: default
+                .button_containers
+                    display: flex
+                    flex-direction: row
+                    align-items: flex-end
+                    button:nth-child(1)
+                        background-color: $button_grey
+                        margin-right: 1.0625rem
+                    button:nth-child(2)
+                        background-color: $button_blue
+                    button
+                        display: block
+                        border-radius: 0.5rem
+                        margin: 0 0 0.3125rem 0
+                        padding: 0.59375rem
+                        width: 6.125rem
+                        font-size: 1rem
+                        font-weight: 600
+                        transform: perspective(1px) scale(1) translateZ(0)
+                        backface-visibility: hidden
+                        -webkit-font-smoothing: subpixel-antialiased
+                        transition: all 0.3s
+                        &:hover
+                            transform: scale(0.8)
+            .line_break
+                width: 100%
+                height: 0.0625rem
+                margin-top: 2.25rem
+                margin-bottom: 2.25rem
+                background: $hr_line
+            .info_text p
+                margin: 0
+                font-size: 1.125rem
+                font-weight: 500
+                line-height: 1.8rem
+                cursor: default
+        .suggested_project
+            display: flex
+            justify-content: flex-end
+            flex-grow: 1
+            text-align: left
+            padding: 2.5625rem 0 0 1.875rem
+            .projects .project_image
+                background-color: $white
+                background-image: url("../../assets/images/svg/picture_posting.svg")
+                background-repeat: no-repeat, repeat
+                background-position: center
+                background-repeat: no-repeat
+                background-size: 130%
+                transition: background-size 0.15s linear
+            .projects:hover .project_image
+                background-size: 100%
+            .projects
+                border-radius: 1.25rem
+                min-height: 17.75rem
+                max-height: 17.75rem
+                max-width: 27.0625rem
+                width: 100%
+                height: 100%
+                background-color: $project_background
+                overflow: hidden
+                cursor: pointer
+                transform: perspective(1px) scale(1) translateZ(0)
+                backface-visibility: hidden
+                -webkit-font-smoothing: subpixel-antialiased
+                transition: all 0.15s ease-in
+                &:hover
+                    transform: scale(0.95)
+                .project_image
+                    border-radius: 0.3125rem
+                    width: 100%
+                    height: 7.9375rem
+                    display: block
+                h5
+                    font-size: 1.1875rem
+                    font-weight: 500
+                    margin: 1rem 1.15625rem 1.125rem 1.15625rem
+                p
+                    font-size: 0.875rem
+                    font-weight: 500
+                    margin: 0 0.71875rem 3.125rem 1.15625rem
+.css_spinners_
+    background-image: url("../../assets/images/svg/spinners.svg")
+    background-repeat: no-repeat, repeat
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+.blog_
+    background-image: url("../../assets/images/svg/blog.svg")
+    background-repeat: no-repeat, repeat
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+.check_list_
+    background-image: url("../../assets/images/svg/check_list.svg")
+    background-repeat: no-repeat, repeat
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+.flashcards_
+    background-image: url("../../assets/images/svg/flashcards.svg")
+    background-repeat: no-repeat, repeat
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+.live_chat_
+    background-image: url("../../assets/images/svg/live_chat.svg")
+    background-repeat: no-repeat, repeat
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
