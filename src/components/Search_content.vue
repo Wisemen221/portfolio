@@ -1,7 +1,7 @@
 <template>
     <header class="search_bar_wrapper">
         <form>
-            <input @keydown="show_projects" @blur="hide_projects" ref="search" type="text" v-model="searchString" aria-label="Search" aria-labelledby="Search" placeholder="Search">
+            <input @keydown="show_projects" ref="search" type="text" v-model="searchString" aria-label="Search" aria-labelledby="Search" placeholder="Search">
             <div class="search_icon"><i class="fas fa-search"></i></div>
         </form>
     </header>
@@ -44,9 +44,6 @@ export default {
     methods:{
         show_projects(){
             this.empty = true
-        },
-        hide_projects(){
-            this.empty = false
         }
     },
     updated(){
