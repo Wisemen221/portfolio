@@ -3,7 +3,7 @@
         <div class="feature_wrapper" v-show="featured_project.length">
             <h1>Feautre</h1>
             <div v-for="feature in featured_project" :key="feature.id" v-cloak>
-                <router-link :to="{name:'Featured_details',params:{id:feature.id}}">
+                <router-link :to="{name:'Project_details',params:{id:id}}">
                     <div class="featured_project_wrapper">
                         <h2>{{ feature.title }}</h2>
                         <img class="featured_project" :src="require(`@/assets/images/svg/${feature.path}`)" alt="Featured Project">
@@ -30,6 +30,11 @@
 
 <script>
 export default {
-    props: ['projects','featured_project']
+    props: ['projects','featured_project'],
+    data(){
+        return{
+            id: 'live_chat'
+        }
+    }
 }
 </script>

@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Project_details from '../views/Project_details.vue'
-import Featured_details from '../views/Featured_details.vue'
 import Search_results from '../views/Search_results.vue'
 import About from '../views/About.vue'
 import Skills from '../views/Skills.vue'
@@ -18,12 +17,6 @@ const routes = [
     path: '/projects/:id',
     name: 'Project_details',
     component: Project_details,
-    props: true
-  },
-  {
-    path: '/featured_project/:id',
-    name: 'Featured_details',
-    component: Featured_details,
     props: true
   },
   {
