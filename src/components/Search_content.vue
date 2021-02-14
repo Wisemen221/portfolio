@@ -10,7 +10,10 @@
         <div class="search_wrapper" v-show="empty">
             <div class="projects" v-for="project in filtered_projects" :key="project.id" v-cloak>
                 <router-link :to="{name:'Project_details',params:{id:project.id}}">
-                    <div ref="project_image" class="project_image"></div>
+                    <!-- <div ref="project_image" class="project_image"></div> -->
+                    <div class="img_wrapper">
+                        <img class="project_image" :src="require(`@/assets/images/svg/${project.path}`)" alt="Projects">
+                    </div>
                     <h5 ref="link">{{ project.title }}</h5>
                     <p>{{ project.description.substring(0, 50) + '...' }}</p>
                 </router-link>
@@ -71,15 +74,15 @@ export default {
                 }
             })
 
-            if(this.$refs.link.innerHTML.length === this.project[3].title.length){
-                this.$refs.project_image.classList.add('search_flashcards')
-            }else if(this.$refs.link.innerHTML.length === this.project[2].title.length){
-                this.$refs.project_image.classList.add('search_spinners')
-            }else if(this.$refs.link.innerHTML.length === this.project[1].title.length){
-                this.$refs.project_image.classList.add('search_check_list')
-            }else if(this.$refs.link.innerHTML.length === this.project[0].title.length){
-                this.$refs.project_image.classList.add('search_blog')
-            }
+            // if(this.$refs.link.innerHTML.length === this.project[3].title.length){
+            //     this.$refs.project_image.classList.add('search_flashcards')
+            // }else if(this.$refs.link.innerHTML.length === this.project[2].title.length){
+            //     this.$refs.project_image.classList.add('search_spinners')
+            // }else if(this.$refs.link.innerHTML.length === this.project[1].title.length){
+            //     this.$refs.project_image.classList.add('search_check_list')
+            // }else if(this.$refs.link.innerHTML.length === this.project[0].title.length){
+            //     this.$refs.project_image.classList.add('search_blog')
+            // }
 
             return articles_array
         }

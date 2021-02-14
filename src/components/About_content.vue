@@ -11,9 +11,9 @@
                 on the web. I'm an inspiring developer and I hope to be a full stack 
                 developer soon. I'm currently in school for Information Technology and
                 will be soon graduating no later than April of this year. 
-                <!-- <router-link :to="{name:'Contact'}"> -->
+                <router-link :to="{name:'Contact'}">
                     <span>Contact</span>
-                <!-- </router-link> -->
+                </router-link>
                  me if
                 your looking for a better design.
             </p>

@@ -245,12 +245,8 @@ button {
   cursor: default;
 }
 
-.main_content_wrapper .feature_wrapper .featured_project {
-  background-image: url("../../assets/images/svg/live_chat.svg");
-  background-repeat: no-repeat, repeat;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.main_content_wrapper .feature_wrapper .featured_project_wrapper {
+  position: relative;
   width: 100%;
   height: 20.125rem;
   border-radius: 1.25rem;
@@ -260,20 +256,44 @@ button {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-font-smoothing: subpixel-antialiased;
+  overflow: hidden;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-.main_content_wrapper .feature_wrapper .featured_project:hover {
-  -webkit-transform: scale(0.98);
-          transform: scale(0.98);
+.main_content_wrapper .feature_wrapper .featured_project_wrapper:hover .featured_project {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
-.main_content_wrapper .feature_wrapper .featured_project h2 {
+.main_content_wrapper .feature_wrapper .featured_project_wrapper .featured_project {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transform: perspective(1px) scale(1) translateZ(0);
+          transform: perspective(1px) scale(1) translateZ(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.main_content_wrapper .feature_wrapper .featured_project_wrapper h2 {
+  position: absolute;
+  top: 0;
+  left: 0;
   padding: 3.59375rem 0 0 4.25rem;
   margin: 0;
   font-size: 2.5625rem;
   font-weight: 500;
+  -webkit-transform: perspective(1px) scale(1) translateZ(0);
+          transform: perspective(1px) scale(1) translateZ(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  z-index: 100;
 }
 
 .main_content_wrapper .other_projects_wrapper h4 {
@@ -294,61 +314,8 @@ button {
   grid-row-gap: 20px;
 }
 
-.main_content_wrapper .other_projects_wrapper .container .projects:nth-child(1) .project_image {
-  background-color: #B400FF;
-  background-image: url("../../assets/images/svg/blog.svg");
-  background-repeat: no-repeat, repeat;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-size: 210%;
-  -webkit-transition: background-size 0.15s linear;
-  transition: background-size 0.15s linear;
-}
-
-.main_content_wrapper .other_projects_wrapper .container .projects:nth-child(2) .project_image {
-  background-color: #FF7551;
-  background-image: url("../../assets/images/svg/check_list.svg");
-  background-repeat: no-repeat, repeat;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-size: 210%;
-  -webkit-transition: background-size 0.15s linear;
-  transition: background-size 0.15s linear;
-}
-
-.main_content_wrapper .other_projects_wrapper .container .projects:nth-child(3) .project_image {
-  background-color: #DE2D2D;
-  background-image: url("../../assets/images/svg/spinners.svg");
-  background-repeat: no-repeat, repeat;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-size: 210%;
-  -webkit-transition: background-size 0.15s linear;
-  transition: background-size 0.15s linear;
-}
-
-.main_content_wrapper .other_projects_wrapper .container .projects:nth-child(4) .project_image {
-  background-color: #47CF73;
-  background-image: url("../../assets/images/svg/flashcards.svg");
-  background-repeat: no-repeat, repeat;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 210%;
-  -webkit-transition: background-size 0.3s linear;
-  transition: background-size 0.3s linear;
-}
-
-.main_content_wrapper .other_projects_wrapper .container .projects:nth-child(4):hover .project_image, .main_content_wrapper .other_projects_wrapper .container .projects:nth-child(3):hover .project_image, .main_content_wrapper .other_projects_wrapper .container .projects:nth-child(2):hover .project_image, .main_content_wrapper .other_projects_wrapper .container .projects:nth-child(1):hover .project_image {
-  background-size: 170%;
-}
-
 .main_content_wrapper .other_projects_wrapper .container .projects {
   border-radius: 1.25rem;
-  max-height: 16.5625rem;
-  min-width: 12.5rem;
   width: 100%;
   height: 100%;
   background-color: #242835;
@@ -359,22 +326,33 @@ button {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-font-smoothing: subpixel-antialiased;
-  -webkit-transition: all 0.15s ease-in;
-  transition: all 0.15s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .main_content_wrapper .other_projects_wrapper .container .projects:hover {
-  -webkit-transform: scale(0.97);
-          transform: scale(0.97);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
 }
 
-.main_content_wrapper .other_projects_wrapper .container .projects .project_image {
-  border-radius: 0.3125rem;
+.main_content_wrapper .other_projects_wrapper .container .projects:hover .project_image {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.main_content_wrapper .other_projects_wrapper .container .projects .img_wrapper {
   width: 100%;
   height: 7.9375rem;
-  display: block;
+  overflow: hidden;
+}
+
+.main_content_wrapper .other_projects_wrapper .container .projects .img_wrapper .project_image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .main_content_wrapper .other_projects_wrapper .container .projects h5 {
@@ -400,6 +378,8 @@ button {
 .details_wrapper .details_image {
   width: 100%;
   height: 24.625rem;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 1.25rem;
 }
 
@@ -505,21 +485,6 @@ button {
   padding: 2.5625rem 0 0 1.875rem;
 }
 
-.details_wrapper .details_content .suggested_project .projects .project_image {
-  background-color: #ffffff;
-  background-image: url("../../assets/images/svg/picture_posting.svg");
-  background-repeat: no-repeat, repeat;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 130%;
-  -webkit-transition: background-size 0.15s linear;
-  transition: background-size 0.15s linear;
-}
-
-.details_wrapper .details_content .suggested_project .projects:hover .project_image {
-  background-size: 100%;
-}
-
 .details_wrapper .details_content .suggested_project .projects {
   border-radius: 1.25rem;
   min-height: 17.75rem;
@@ -544,11 +509,24 @@ button {
           transform: scale(0.95);
 }
 
-.details_wrapper .details_content .suggested_project .projects .project_image {
-  border-radius: 0.3125rem;
+.details_wrapper .details_content .suggested_project .projects:hover .project_image {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.details_wrapper .details_content .suggested_project .projects .img_wrapper {
   width: 100%;
   height: 7.9375rem;
-  display: block;
+  overflow: hidden;
+}
+
+.details_wrapper .details_content .suggested_project .projects .img_wrapper .project_image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .details_wrapper .details_content .suggested_project .projects h5 {
@@ -563,54 +541,11 @@ button {
   margin: 0 0.71875rem 3.125rem 1.15625rem;
 }
 
-.css_spinners_ {
-  background-image: url("../../assets/images/svg/spinners.svg");
-  background-repeat: no-repeat, repeat;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.blog_ {
-  background-image: url("../../assets/images/svg/blog.svg");
-  background-repeat: no-repeat, repeat;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.check_list_ {
-  background-image: url("../../assets/images/svg/check_list.svg");
-  background-repeat: no-repeat, repeat;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.flashcards_ {
-  background-image: url("../../assets/images/svg/flashcards.svg");
-  background-repeat: no-repeat, repeat;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.live_chat_ {
-  background-image: url("../../assets/images/svg/live_chat.svg");
-  background-repeat: no-repeat, repeat;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .featured_image {
-  background-image: url("../../assets/images/svg/live_chat.svg");
-  background-repeat: no-repeat, repeat;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 100%;
   height: 24.625rem;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 1.25rem;
 }
 
@@ -638,91 +573,48 @@ button {
   grid-row-gap: 20px;
 }
 
-.search_content_wrapper .search_wrapper .projects:nth-child(1) .project_image {
-  background-color: #B400FF;
-  background-image: url("../../assets/images/svg/blog.svg");
-  background-repeat: no-repeat, repeat;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-size: 210%;
-  -webkit-transition: background-size 0.15s linear;
-  transition: background-size 0.15s linear;
-}
-
-.search_content_wrapper .search_wrapper .projects:nth-child(2) .project_image {
-  background-color: #FF7551;
-  background-image: url("../../assets/images/svg/check_list.svg");
-  background-repeat: no-repeat, repeat;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-size: 210%;
-  -webkit-transition: background-size 0.15s linear;
-  transition: background-size 0.15s linear;
-}
-
-.search_content_wrapper .search_wrapper .projects:nth-child(3) .project_image {
-  background-color: #DE2D2D;
-  background-image: url("../../assets/images/svg/spinners.svg");
-  background-repeat: no-repeat, repeat;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-size: 210%;
-  -webkit-transition: background-size 0.15s linear;
-  transition: background-size 0.15s linear;
-}
-
-.search_content_wrapper .search_wrapper .projects:nth-child(4) .project_image {
-  background-color: #47CF73;
-  background-image: url("../../assets/images/svg/flashcards.svg");
-  background-repeat: no-repeat, repeat;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 210%;
-  -webkit-transition: background-size 0.15s linear;
-  transition: background-size 0.15s linear;
-}
-
-.search_content_wrapper .search_wrapper .projects:nth-child(4):hover .project_image, .search_content_wrapper .search_wrapper .projects:nth-child(3):hover .project_image, .search_content_wrapper .search_wrapper .projects:nth-child(2):hover .project_image, .search_content_wrapper .search_wrapper .projects:nth-child(1):hover .project_image {
-  background-size: 170%;
-}
-
 .search_content_wrapper .search_wrapper .projects {
   position: relative;
   border-radius: 1.25rem;
-  max-height: 16.5625rem;
-  min-width: 12.5rem;
   width: 100%;
   height: 100%;
   background-color: #242835;
   overflow: hidden;
   cursor: pointer;
-  -webkit-transform: perspective(1px) scale(0) translateZ(0) translateY(50px);
-          transform: perspective(1px) scale(0) translateZ(0) translateY(50px);
+  -webkit-transform: perspective(1px) scale(1) translateZ(0);
+          transform: perspective(1px) scale(1) translateZ(0);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-font-smoothing: subpixel-antialiased;
-  opacity: 0;
   -webkit-animation: fly_in 0.15s ease-in forwards;
           animation: fly_in 0.15s ease-in forwards;
-  -webkit-transition: all 0.15s ease-in;
-  transition: all 0.15s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .search_content_wrapper .search_wrapper .projects:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
 }
 
-.search_content_wrapper .search_wrapper .projects .project_image {
-  border-radius: 0.3125rem;
+.search_content_wrapper .search_wrapper .projects:hover .project_image {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.search_content_wrapper .search_wrapper .projects .img_wrapper {
   width: 100%;
   height: 7.9375rem;
-  display: block;
+  overflow: hidden;
+}
+
+.search_content_wrapper .search_wrapper .projects .img_wrapper .project_image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .search_content_wrapper .search_wrapper .projects h5 {
@@ -735,22 +627,6 @@ button {
   font-size: 0.875rem;
   font-weight: 500;
   margin: 0 0.71875rem 3.125rem 1.15625rem;
-}
-
-.search_flashcards {
-  background-image: url("../../assets/images/svg/flashcards.svg") !important;
-}
-
-.search_spinners {
-  background-image: url("../../assets/images/svg/spinners.svg") !important;
-}
-
-.search_check_list {
-  background-image: url("../../assets/images/svg/check_list.svg") !important;
-}
-
-.search_blog {
-  background-image: url("../../assets/images/svg/blog.svg") !important;
 }
 
 .about_content_wrapper {

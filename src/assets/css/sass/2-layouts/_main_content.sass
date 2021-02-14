@@ -11,12 +11,8 @@
             font-weight: 600
             margin: 0 0 0.5625rem 0
             cursor: default
-        .featured_project
-            background-image: url("../../assets/images/svg/live_chat.svg")
-            background-repeat: no-repeat, repeat
-            background-position: center
-            background-repeat: no-repeat
-            background-size: cover
+        .featured_project_wrapper
+            position: relative
             width: 100%
             height: 20.125rem
             border-radius: 1.25rem
@@ -24,14 +20,30 @@
             transform: perspective(1px) scale(1) translateZ(0)
             backface-visibility: hidden
             -webkit-font-smoothing: subpixel-antialiased
+            overflow: hidden
             transition: all 0.3s
-            &:hover
-                transform: scale(0.98)
+            &:hover .featured_project
+                transform: scale(1.1)
+            .featured_project
+                width: 100%
+                height: 100%
+                object-fit: cover
+                transform: perspective(1px) scale(1) translateZ(0)
+                backface-visibility: hidden
+                -webkit-font-smoothing: subpixel-antialiased
+                transition: all 0.3s
             h2
+                position: absolute
+                top: 0
+                left: 0
                 padding: 3.59375rem 0 0 4.25rem
                 margin: 0
                 font-size: 2.5625rem
                 font-weight: 500
+                transform: perspective(1px) scale(1) translateZ(0)
+                backface-visibility: hidden
+                -webkit-font-smoothing: subpixel-antialiased
+                z-index: 100
     .other_projects_wrapper
         h4
             display: block
@@ -45,47 +57,10 @@
             grid-template-columns: repeat(4, 1fr)
             grid-column-gap: 20px
             grid-row-gap: 20px
-            .projects:nth-child(1) .project_image
-                background-color: $skills_link
-                background-image: url("../../assets/images/svg/blog.svg")
-                background-repeat: no-repeat, repeat
-                background-position: center
-                background-repeat: no-repeat
-                background-size: cover
-                background-size: 210%
-                transition: background-size 0.15s linear
-            .projects:nth-child(2) .project_image
-                background-color: $project_link
-                background-image: url("../../assets/images/svg/check_list.svg")
-                background-repeat: no-repeat, repeat
-                background-position: center
-                background-repeat: no-repeat
-                background-size: cover
-                background-size: 210%
-                transition: background-size 0.15s linear
-            .projects:nth-child(3) .project_image
-                background-color: $spinners_background
-                background-image: url("../../assets/images/svg/spinners.svg")
-                background-repeat: no-repeat, repeat
-                background-position: center
-                background-repeat: no-repeat
-                background-size: cover
-                background-size: 210%
-                transition: background-size 0.15s linear
-            .projects:nth-child(4) .project_image
-                background-color: $contact_link
-                background-image: url("../../assets/images/svg/flashcards.svg")
-                background-repeat: no-repeat, repeat
-                background-position: center
-                background-repeat: no-repeat
-                background-size: 210%
-                transition: background-size 0.3s linear
-            .projects:nth-child(4):hover .project_image, .projects:nth-child(3):hover .project_image, .projects:nth-child(2):hover .project_image, .projects:nth-child(1):hover .project_image,
-                background-size: 170%
             .projects
                 border-radius: 1.25rem
-                max-height: 16.5625rem
-                min-width: 12.5rem
+                // max-height: 16.5625rem
+                // min-width: 12.5rem
                 width: 100%
                 height: 100%
                 background-color: $project_background
@@ -94,15 +69,20 @@
                 transform: perspective(1px) scale(1) translateZ(0)
                 backface-visibility: hidden
                 -webkit-font-smoothing: subpixel-antialiased
-                transition: all 0.15s ease-in
+                transition: all 0.2s ease-in
                 &:hover
-                    transform: scale(0.97)
-                    backface-visibility: hidden
-                .project_image
-                    border-radius: 0.3125rem
+                    transform: scale(0.98)
+                &:hover .project_image
+                    transform: scale(1.1)
+                .img_wrapper
                     width: 100%
                     height: 7.9375rem
-                    display: block
+                    overflow: hidden
+                    .project_image
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                        transition: all 0.2s ease-in
                 h5
                     font-size: 1.1875rem
                     font-weight: 500

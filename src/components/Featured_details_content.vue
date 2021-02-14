@@ -1,9 +1,9 @@
 <template>
     <div class="details_wrapper">
-        <div class="featured_image"></div>
-        <div class="details_content">
-            <div class="project_info_wrapper">
-                <div v-if="feature" v-cloak>
+        <div v-if="feature" v-cloak>
+            <img class="featured_image" :src="require(`@/assets/images/svg/${feature.path}`)" alt="Flashcard Project">
+            <div class="details_content">
+                <div class="project_info_wrapper">
                     <div class="info_title">
                         <h2>{{ feature.title }}</h2>
                         <div class="button_containers">
@@ -16,12 +16,14 @@
                         <p>{{ feature.description }}</p>
                     </div>
                 </div>
-            </div>
-            <div class="suggested_project">
-                <div class="projects" @click="alert_user" v-for="soon in coming_soon" :key="soon.id">
-                    <div class="project_image"></div>
-                    <h5>{{ soon.title }}</h5>
-                    <p>{{ soon.description.substring(0, 100) + '...' }}</p>
+                <div class="suggested_project">
+                    <div class="projects" @click="alert_user" v-for="soon in coming_soon" :key="soon.id">
+                        <div class="img_wrapper">
+                            <img class="project_image" :src="require(`@/assets/images/svg/${soon.path}`)" alt="Flashcard Project">
+                        </div>
+                        <h5>{{ soon.title }}</h5>
+                        <p>{{ soon.description.substring(0, 100) + '...' }}</p>
+                    </div>
                 </div>
             </div>
         </div>
