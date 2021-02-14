@@ -1,6 +1,6 @@
 <template>
     <main class="main_content_wrapper">
-        <div class="feature_wrapper" v-show="featured_project">
+        <div class="feature_wrapper" v-show="featured_project.length">
             <h1>Feautre</h1>
             <div v-for="feature in featured_project" :key="feature.id" v-cloak>
                 <router-link :to="{name:'Featured_details',params:{id:feature.id}}">
@@ -11,9 +11,9 @@
                 </router-link>
             </div>
         </div>
-        <div class="other_projects_wrapper">
+        <div class="other_projects_wrapper" v-show="projects.length">
             <h4>Other Projects</h4>
-            <div class="container" v-show="projects">
+            <div class="container">
                 <div class="projects" v-for="project in projects" :key="project.id" v-cloak>
                     <router-link :to="{name:'Project_details',params:{id:project.id}}">
                         <div class="img_wrapper">
@@ -29,22 +29,7 @@
 </template>
 
 <script>
-import { onUpdated, ref } from 'vue'
 export default {
-    props: ['projects','featured_project'],
-    data(){
-        return{
-            // test: '../assets/images/svg/'
-        }
-    },
-    setup(props){
-        const test = ref('')
-        onUpdated(()=>{
-            if(props.featured_project){
-               test.value = '../assets/images/svg/'
-            }
-        })
-        return {test}
-    }
+    props: ['projects','featured_project']
 }
 </script>

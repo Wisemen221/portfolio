@@ -44,7 +44,6 @@ export default {
       } catch(error) {
           console.log({error})
       }
-      // Reset form field
       this.first_name = ''
       this.last_name = ''
       this.email = ''

@@ -13,6 +13,12 @@
     </div>
 </template>
 
+<script>
+export default {
+    name: 'Not_found'
+}
+</script>
+
 <style scoped>
     .not_found_page{
         text-align: center;

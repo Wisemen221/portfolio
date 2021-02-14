@@ -5,7 +5,7 @@
             <div class="details_content">
                 <div class="project_info_wrapper">
                     <div class="info_title">
-                        <h2 ref="project_title">{{ project.title }}</h2>
+                        <h2>{{ project.title }}</h2>
                         <div class="button_containers">
                             <button aria-label="GitHub Link"><i class="fab fa-github"></i> Code</button>
                             <button aria-label="External Porject Link"><i class="fas fa-external-link-square-alt"></i> Link</button>

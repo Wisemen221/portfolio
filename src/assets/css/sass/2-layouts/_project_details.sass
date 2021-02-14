@@ -20,8 +20,6 @@
                 display: flex
                 justify-content: space-between
                 h2
-                    font-size: 2.5625rem
-                    font-weight: 500
                     margin: 2.5625rem 0 0 0
                     cursor: default
                 .button_containers
@@ -41,18 +39,9 @@
                         width: 6.125rem
                         font-size: 1rem
                         font-weight: 600
-                        transform: perspective(1px) scale(1) translateZ(0)
-                        backface-visibility: hidden
-                        -webkit-font-smoothing: subpixel-antialiased
                         transition: all 0.3s
                         &:hover
                             transform: scale(0.8)
-            .line_break
-                width: 100%
-                height: 0.0625rem
-                margin-top: 2.25rem
-                margin-bottom: 2.25rem
-                background: $hr_line
             .info_text p
                 margin: 0
                 font-size: 1.125rem
@@ -66,37 +55,10 @@
             text-align: left
             padding: 2.5625rem 0 0 1.875rem
             .projects
-                border-radius: 1.25rem
                 min-height: 17.75rem
                 max-height: 17.75rem
                 max-width: 27.0625rem
-                width: 100%
-                height: 100%
-                background-color: $project_background
-                overflow: hidden
-                cursor: pointer
-                transform: perspective(1px) scale(1) translateZ(0)
-                backface-visibility: hidden
-                -webkit-font-smoothing: subpixel-antialiased
-                transition: all 0.15s ease-in
-                &:hover
-                    transform: scale(0.95)
-                &:hover .project_image
-                    transform: scale(1.1)
-                .img_wrapper
-                    width: 100%
-                    height: 7.9375rem
-                    overflow: hidden
-                    .project_image
-                        width: 100%
-                        height: 100%
-                        object-fit: cover
-                        transition: all 0.2s ease-in
                 h5
-                    font-size: 1.1875rem
-                    font-weight: 500
                     margin: 1rem 1.15625rem 1.125rem 1.15625rem
                 p
-                    font-size: 0.875rem
-                    font-weight: 500
                     margin: 0 0.71875rem 3.125rem 1.15625rem
