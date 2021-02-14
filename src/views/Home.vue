@@ -1,5 +1,6 @@
 <template>
-    <div class="home_wrapper">
+    <Welcome_animation v-if="!show_home" @anim_complete="update"/>
+    <div ref="app" class="home_wrapper" v-if="show_home">
         <Side_nav :home="home" />
         <div class="main_page_wrapper">
             <Search_bar />
@@ -9,17 +10,33 @@
 </template>
 
 <script>
+import Welcome_animation from '../components/Welcome_animation'
 import get_projects from '../composables/get_projects'
 import Side_nav from '../components/Side_nav'
 import Search_bar from '../components/Search_bar'
 import Main_content from '../components/Main_content'
+import { gsap } from "gsap"
 
 export default {
     name: 'Home',
-    components: { Side_nav, Search_bar, Main_content },
+    components: { Side_nav, Search_bar, Main_content, Welcome_animation },
     data(){
         return {
-            home: 'home'
+            home: 'home',
+            show_home: false,
+            animated: null
+        }
+    },
+    beforeMount(){
+        if(window.localStorage){
+            this.animated = localStorage.getItem('animation_done')
+            if(this.animated){
+                this.show_home = true
+            }else{
+                this.show_home = false
+            }
+        }else{
+            window.alert('localstorage is not supported')
         }
     },
     setup(){
@@ -28,6 +45,16 @@ export default {
         load()
         
         return { projects, featured_project }
+    },
+    methods:{
+        update(){
+            this.show_home = true
+        }
+    },
+    updated(){
+        const { app } = this.$refs
+
+        gsap.fromTo(app, {translateX: -1550}, {translateX: 0, duration: 1, ease: "elastic.out(1, 0.90)"})
     }
 }
 </script>

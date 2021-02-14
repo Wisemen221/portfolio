@@ -19,6 +19,8 @@ html, body
     color: $white
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
+    transform: perspective(1px) scale(1) translateZ(0)
+    backface-visibility: hidden
     background: linear-gradient(217deg, $red, $black)
     width: 100%
     height: 100%
