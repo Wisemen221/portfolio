@@ -24,7 +24,9 @@ export default {
         return {
             home: 'home',
             show_home: false,
-            animated: null
+            animated: null,
+            animated_app: null,
+            trigger: true
         }
     },
     beforeMount(){
@@ -52,9 +54,24 @@ export default {
         }
     },
     updated(){
-        const { app } = this.$refs
-
-        gsap.fromTo(app, {translateX: -1550}, {translateX: 0, duration: 1, ease: "elastic.out(1, 0.90)"})
+        // if (window.matchMedia("(min-width: 400px)").matches){
+            if(window.localStorage){
+                this.animated_app = localStorage.getItem('app_done')
+                if(!this.animated_app){
+                    gsap.fromTo(app, {translateX: -1550}, {translateX: 0, duration: 1, ease: "elastic.out(1, 0.90)", onComplete:()=>{
+                        if(window.localStorage){
+                            localStorage.setItem('app_done', this.trigger)
+                        }else{
+                            window.alert('localstorage is not supported')
+                        }
+                    }})
+                }else{
+                    return
+                }
+            }else{
+                window.alert('localstorage is not supported')
+            }
+        // }
     }
 }
 </script>

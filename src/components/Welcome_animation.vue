@@ -36,7 +36,7 @@
                 }
             }
         },
-        async mounted() {
+        mounted() {
             const { moduleWrapper } = this.$refs
             const { module } = this.$refs
             const { title } = this.$refs
@@ -49,7 +49,7 @@
             const { bottom } = this.$refs
             const timeline = new TimelineLite({onComplete:this.onCompleteAll})
 
-            timeline.to(module, 1.3, {scale: 1, ease: "elastic.out(1, 0.5)"})
+            timeline.to(module, 2, {scale: 1, ease: "elastic.out(1, 0.5)",delay: 0.5})
             .to(box1, 0.5, {opacity: 1, translateY: 0, ease: Back.easeInOut},'-=0.4')
             .to(box2, 0.5, {opacity: 1, translateY: 0, ease: Back.easeInOut},'-=0.4')
             .to(box3, 0.5, {opacity: 1, translateY: 0, ease: Back.easeInOut},'-=0.4')
