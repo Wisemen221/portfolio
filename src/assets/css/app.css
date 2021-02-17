@@ -170,11 +170,13 @@ input:invalid {
   width: 77.5rem;
   max-height: 54.25rem;
   height: 100%;
-  background-color: #20192D;
+  background-color: rgba(32, 25, 45, 0.9);
   border-radius: 1.25rem;
   overflow: hidden;
   -webkit-box-shadow: 0 1.25rem 3.125rem rgba(0, 0, 0, 0.3);
           box-shadow: 0 1.25rem 3.125rem rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .home_wrapper .main_page_wrapper {
@@ -938,6 +940,7 @@ input:invalid {
   .home_wrapper {
     border-radius: 0;
     max-height: 100%;
+    background-color: #20192D;
   }
   .main_content_wrapper .other_projects_wrapper .container, .search_content_wrapper .search_wrapper {
     grid-row-gap: 2rem;
