@@ -7,7 +7,7 @@
 				<h2 class="rw-sentence">
 					<span>Don't worry,</span>
 					<br />
-					<span>I have skills and experience in</span>
+					<span>I have skills and experience <br class="break" />in</span>
 					<div class="rw-words rw-words-1">
 						<span>HTML</span>
 						<span>CSS</span>
@@ -110,28 +110,28 @@
     }
     @-webkit-keyframes rotateWord {
         0% { opacity: 0; }
-        1% { opacity: 0; -webkit-transform: translateY(-1.875rem); }
+        1% { opacity: 0; -webkit-transform: translateY(1.875rem); }
         5% { opacity: 1; -webkit-transform: translateY(0);}
         11% { opacity: 1; -webkit-transform: translateY(0); }
-        14% { opacity: 0; -webkit-transform: translateY(1.875rem); }
+        14% { opacity: 0; -webkit-transform: translateY(-1.875rem); }
         80% { opacity: 0; }
         100% { opacity: 0; }
     }
     @-ms-keyframes rotateWord {
         0% { opacity: 0; }
-        1% { opacity: 0; -ms-transform: translateY(-1.875rem); }
+        1% { opacity: 0; -ms-transform: translateY(1.875rem); }
         5% { opacity: 1; -ms-transform: translateY(0);}
         11% { opacity: 1; -ms-transform: translateY(0); }
-        14% { opacity: 0; -ms-transform: translateY(1.875rem); }
+        14% { opacity: 0; -ms-transform: translateY(-1.875rem); }
         80% { opacity: 0; }
         100% { opacity: 0; }
     }
     @keyframes rotateWord {
         0% { opacity: 0; }
-        1% { opacity: 0; -webkit-transform: translateY(-1.875rem); transform: translateY(-1.875rem); }
+        1% { opacity: 0; -webkit-transform: translateY(1.875rem); transform: translateY(1.875rem); }
         5% { opacity: 1; -webkit-transform: translateY(0); transform: translateY(0);}
         11% { opacity: 1; -webkit-transform: translateY(0); transform: translateY(0); }
-        14% { opacity: 0; -webkit-transform: translateY(1.875rem); transform: translateY(1.875rem); }
+        14% { opacity: 0; -webkit-transform: translateY(-1.875rem); transform: translateY(-1.875rem); }
         80% { opacity: 0; }
         100% { opacity: 0; }
     }

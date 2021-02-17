@@ -65,7 +65,7 @@
 
 <style scoped>
     html, body{
-        transform: perspective(1px) scale(1) translateZ(0);
+        transform: perspective(0.0625rem) scale(1) translateZ(0);
         backface-visibility: hidden;
         -webkit-font-smoothing: subpixel-antialiased;
     }
@@ -81,7 +81,7 @@
         color: white;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        transform: perspective(1px) scale(1) translateZ(0);
+        transform: perspective(0.0625rem) scale(1) translateZ(0);
         backface-visibility: hidden;
         text-align: center;
         height: 13.4375rem;
@@ -98,7 +98,7 @@
         letter-spacing: 0.5rem;
         cursor: default;
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(0.625rem);
     }
     .module{
         background-color: #fff;
@@ -128,7 +128,7 @@
         border-radius: 0.4375rem;
         margin: 0;
         padding: 0;
-        transform: translateY(-40px);
+        transform: translateY(-2.5rem);
         opacity: 0;
     }
     .box_1{

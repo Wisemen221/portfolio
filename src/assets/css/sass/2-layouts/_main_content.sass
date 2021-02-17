@@ -1,10 +1,10 @@
 //main content layout
 .main_content_wrapper
     width: 100%
-    height: 100%
-    background-color: $dark_background_color
+    height: auto
     border-radius: 1.25rem 0 0 0
     padding: 1.46875rem 1.875rem 0 2.9375rem
+    transition: all 0.4s ease
     .feature_wrapper
         h1
             margin: 0 0 0.5625rem 0
@@ -15,7 +15,7 @@
             height: 20.125rem
             border-radius: 1.25rem
             cursor: pointer
-            transform: perspective(1px) scale(1) translateZ(0)
+            transform: perspective(0.0625rem) scale(1) translateZ(0)
             backface-visibility: hidden
             -webkit-font-smoothing: subpixel-antialiased
             overflow: hidden
@@ -26,7 +26,7 @@
                 width: 100%
                 height: 100%
                 object-fit: cover
-                transform: perspective(1px) scale(1) translateZ(0)
+                transform: perspective(0.0625rem) scale(1) translateZ(0)
                 backface-visibility: hidden
                 -webkit-font-smoothing: subpixel-antialiased
                 transition: all 0.3s
@@ -38,26 +38,16 @@
                 margin: 0
                 font-size: 2.5625rem
                 font-weight: 500
-                transform: perspective(1px) scale(1) translateZ(0)
+                transform: perspective(0.0625rem) scale(1) translateZ(0)
                 backface-visibility: hidden
                 -webkit-font-smoothing: subpixel-antialiased
                 z-index: 100
+                transition: all 0.4s ease
     .other_projects_wrapper
+        padding-bottom: 1.5625rem
         h4
             display: block
             margin: 1.4375rem 0 0.96875rem 0
             font-size: 1.5625rem
             font-weight: 500
             cursor: default
-        .container
-            display: grid
-            width: 100%
-            grid-template-columns: repeat(4, 1fr)
-            grid-column-gap: 1.25rem
-            grid-row-gap: 1.25rem
-            .projects:nth-child(5)
-                display: none
-            h5
-                margin: 1rem 1.15625rem 1.125rem 1.15625rem
-            p
-                margin: 0 0.71875rem 3.125rem 1.15625rem

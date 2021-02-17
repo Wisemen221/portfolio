@@ -1,18 +1,31 @@
 //search bar layout
 .search_bar_wrapper
-    width: 100%
-    padding: 1.84375rem 1.875rem 1.0625rem 0
-    form
-        input
-            width: 39%
-        .search_icon
-            display: inline-block
-            margin: 0
-            padding: 0
-            color: $search_bar_text
-            background-color: $search_bar_background
-            border: 0
-            border-radius: 0 0.4375rem 0.4375rem 0
-            padding: 0.515625rem 1rem
-            font-size: 0.9375rem
-            cursor: text
+    position: -webkit-sticky
+    position: sticky
+    top: 0
+    padding: 1.84375rem 1.875rem 1.25rem 0
+    background: linear-gradient(to bottom, $background_color 90%, rgba(31, 29, 43, 0) 100%)
+    z-index: 100
+    .search_bar
+        width: 40%
+        transition: all 0.4s ease
+        .input_wrapper
+            display: flex
+            flex-direction: row
+            justify-content: flex-start
+            align-items: center
+            input
+                width: 100%
+                height: 2.15625rem
+            .search_icon
+                display: inline-block
+                margin: 0
+                padding: 0
+                color: $search_bar_text
+                background-color: $search_bar_background
+                border: 0
+                height: 2.15625rem
+                border-radius: 0 0.4375rem 0.4375rem 0
+                padding: 0.515625rem 1rem
+                font-size: 0.9375rem
+                cursor: text

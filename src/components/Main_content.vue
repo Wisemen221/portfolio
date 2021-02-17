@@ -14,23 +14,18 @@
         <div class="other_projects_wrapper" v-show="projects.length">
             <h4>Other Projects</h4>
             <div class="container">
-                <div class="projects" v-for="project in projects" :key="project.id" v-cloak>
-                    <router-link :to="{name:'Project_details',params:{id:project.id}}">
-                        <div class="img_wrapper">
-                            <img class="project_image" :src="require(`@/assets/images/svg/${project.path}`)" alt="Projects">
-                        </div>
-                        <h5>{{ project.title }}</h5>
-                        <p>{{ project.description.substring(0, 50) + '...' }}</p>
-                    </router-link>
-                </div>
+                <Projects_main :projects="projects"/>
             </div>
         </div>
     </main>
 </template>
 
 <script>
+import Projects_main from '../components/Projects_main.vue'
+
 export default {
     props: ['projects','featured_project'],
+    components:{Projects_main},
     data(){
         return{
             id: 'live_chat'

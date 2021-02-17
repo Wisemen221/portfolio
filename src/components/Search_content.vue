@@ -1,9 +1,11 @@
 <template>
     <header class="search_bar_wrapper">
-        <form>
-            <input @keydown="show_projects" ref="search" type="text" v-model="searchString" aria-label="Search" aria-labelledby="Search" placeholder="Search">
-            <div class="search_icon"><i class="fas fa-search"></i></div>
-        </form>
+        <div class="search_bar">
+            <div class="input_wrapper">
+                <input @keydown="show_projects" ref="search" type="text" v-model="searchString" aria-label="Search" aria-labelledby="Search" placeholder="Search">
+                <div class="search_icon"><i class="fas fa-search"></i></div>
+            </div>
+        </div>
     </header>
     <div class="search_content_wrapper">
         <h1>Search For A Project</h1>

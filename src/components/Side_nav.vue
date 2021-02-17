@@ -7,14 +7,14 @@
         </div>
         <nav class="side_nav">
             <div class="menu_title">
-                <h3>MENU</h3>
+                <h3><span>MENU</span></h3>
             </div>
             <ul>
                 <li class="menu_links">
                     <router-link :to="{name:'Home'}">
                         <a href="javascript: void(0)" :id="home">
                             <div class="menu_icon_box projects"><i class="fas fa-toolbox"></i></div>
-                            Projects
+                            <span>Projects</span>
                         </a>
                     </router-link>
                 </li>
@@ -22,7 +22,7 @@
                     <router-link :to="{name:'About'}">
                         <a href="javascript: void(0)" :id="about">
                             <div class="menu_icon_box about"><i class="fas fa-user-tie"></i></div>
-                            About
+                            <span>About</span>
                         </a>
                     </router-link>
                 </li>
@@ -30,7 +30,7 @@
                     <router-link :to="{name:'Skills'}">
                         <a href="javascript: void(0)" :id="skills">
                             <div class="menu_icon_box skills"><i class="fas fa-laptop-code"></i></div>
-                            Skills
+                            <span>Skills</span>
                         </a>
                     </router-link>
                 </li>
@@ -39,7 +39,7 @@
                         <a href="javascript: void(0)" :id="contact">
                             <div class="menu_icon_box contact"><i class="fas fa-envelope"></i>
                             </div>
-                            Contact
+                            <span>Contact</span>
                         </a>
                     </router-link>
                 </li>

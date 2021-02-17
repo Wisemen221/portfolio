@@ -1,24 +1,25 @@
 //project details layout
 .details_wrapper
     width: 100%
-    height: 100%
-    background-color: $dark_background_color
-    border-radius: 1.25rem 0 0 0
+    height: auto
     padding: 1.46875rem 1.875rem 0 2.9375rem
     .details_image
         width: 100%
         height: 24.625rem
         object-fit: cover
         border-radius: 1.25rem
+        transition: all 0.15s ease
     .details_content
         display: flex
         width: 100%
+        transition: all 0.15s ease
         .project_info_wrapper
             max-width: 32.8125rem
             width: 100%
             .info_title
                 display: flex
                 justify-content: space-between
+                transition: all 0.15s ease
                 h2
                     margin: 2.5625rem 0 0 0
                     cursor: default
@@ -26,6 +27,7 @@
                     display: flex
                     flex-direction: row
                     align-items: flex-end
+                    transition: all 0.15s ease
                     button:nth-child(1)
                         background-color: $button_grey
                         margin-right: 1.0625rem
@@ -53,11 +55,13 @@
             justify-content: flex-end
             flex-grow: 1
             text-align: left
+            margin-bottom: 1.25rem
             padding: 2.5625rem 0 0 1.875rem
             .projects
                 min-height: 17.75rem
                 max-height: 17.75rem
                 max-width: 27.0625rem
+                transition: all 0.15s ease
                 h5
                     margin: 1rem 1.15625rem 1.125rem 1.15625rem
                 p

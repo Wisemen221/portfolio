@@ -2,7 +2,7 @@
     <Welcome_animation v-if="!show_home" @anim_complete="update"/>
     <div ref="app" class="home_wrapper" v-if="show_home">
         <Side_nav :home="home" />
-        <div class="main_page_wrapper">
+        <div id="main_page_wrapper" class="main_page_wrapper">
             <Search_bar />
             <Main_content :projects="projects" :featured_project="featured_project" />
         </div>
@@ -54,7 +54,7 @@ export default {
         }
     },
     updated(){
-        // if (window.matchMedia("(min-width: 400px)").matches){
+        // if (window.matchMedia("(min-width: 25rem)").matches){
             if(window.localStorage){
                 this.animated_app = localStorage.getItem('app_done')
                 if(!this.animated_app){
