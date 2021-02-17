@@ -12,7 +12,7 @@
             <ul id="link_wrapper">
                 <li class="menu_links">
                     <router-link :to="{name:'Home'}">
-                        <a href="javascript: void(0)" :id="home">
+                        <a href="#" :id="home">
                             <div class="menu_icon_box projects"><i class="fas fa-toolbox"></i></div>
                             <span>Projects</span>
                         </a>
@@ -20,7 +20,7 @@
                 </li>
                 <li class="menu_links">
                     <router-link :to="{name:'About'}">
-                        <a href="javascript: void(0)" :id="about">
+                        <a href="#" :id="about">
                             <div class="menu_icon_box about"><i class="fas fa-user-tie"></i></div>
                             <span>About</span>
                         </a>
@@ -28,7 +28,7 @@
                 </li>
                 <li class="menu_links">
                     <router-link :to="{name:'Skills'}">
-                        <a href="javascript: void(0)" :id="skills">
+                        <a href="#" :id="skills">
                             <div class="menu_icon_box skills"><i class="fas fa-laptop-code"></i></div>
                             <span>Skills</span>
                         </a>
@@ -36,7 +36,7 @@
                 </li>
                 <li class="menu_links">
                     <router-link :to="{name:'Contact'}">
-                        <a href="javascript: void(0)" :id="contact">
+                        <a href="#" :id="contact">
                             <div class="menu_icon_box contact"><i class="fas fa-envelope"></i>
                             </div>
                             <span>Contact</span>

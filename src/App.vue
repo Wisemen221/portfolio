@@ -7,7 +7,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(217deg, #D20B49, #000);
+    /* background-color: #060716; */
+    background-image: url('../src/assets/images/png/moon.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
     width: 100%;
     height: 100%;
   }

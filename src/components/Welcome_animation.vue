@@ -3,10 +3,10 @@
         <div ref="moduleWrapper" class="module_wrapper">
             <h1 ref="title">Welcome</h1>
             <div ref="module" class="module">
-                <div class="top_wrapper">
+                <div ref="top" class="top_wrapper">
                     <div ref="box1" class="box box_1"></div>
                 </div>
-                <div class="bottom_wrapper">
+                <div ref="bottom" class="bottom_wrapper">
                     <div ref="box2" class="box box_2"></div>
                     <div ref="box3" class="box box_4"></div>
                     <div ref="box4" class="box box_5"></div>
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-    import { TimelineLite, Back } from 'gsap'
+    import { gsap, Back } from 'gsap'
 
     export default {
         data(){
@@ -47,18 +47,19 @@
             const { box5 } = this.$refs
             const { top } = this.$refs
             const { bottom } = this.$refs
-            const timeline = new TimelineLite({onComplete:this.onCompleteAll})
 
-            timeline.to(module, 2, {scale: 1, ease: "elastic.out(1, 0.5)",delay: 0.5})
-            .to(box1, 0.5, {opacity: 1, translateY: 0, ease: Back.easeInOut},'-=0.4')
-            .to(box2, 0.5, {opacity: 1, translateY: 0, ease: Back.easeInOut},'-=0.4')
-            .to(box3, 0.5, {opacity: 1, translateY: 0, ease: Back.easeInOut},'-=0.4')
-            .to(box4, 0.5, {opacity: 1, translateY: 0, ease: Back.easeInOut},'-=0.4')
-            .to(box5, 0.5, {opacity: 1, translateY: 0, ease: Back.easeInOut},'-=0.4')
-            .to(top, 0.4, {marginLeft: 10+'%', ease: Back.easeInOut},'-=0.2')
-            .to(bottom, 0.4, {marginLeft: 10+'%', ease: Back.easeInOut},'-=0.2')
-            .to(title, 0.4, {translateY: 0, opacity: 1, ease: Back.easeInOut},'-=0.8')
-            .to(moduleWrapper, 0.3, {opacity: 0, ease: Back.easeOut},'+=0.5')
+            const tl = gsap.timeline({onComplete:this.onCompleteAll})
+
+            tl.to(module,{scale: 1, duration: 1.5, delay: 1, ease: "elastic.out(1, 0.5)" })
+            .to(box1,{y: 0, stagger: 0.1, opacity: 1, ease: Back.easeInOut},'-=0.4')
+            .to(box2,{y: 0, stagger: 0.1, opacity: 1, ease: Back.easeInOut},'-=0.4')
+            .to(box3,{y: 0, stagger: 0.1, opacity: 1, ease: Back.easeInOut},'-=0.4')
+            .to(box4,{y: 0, stagger: 0.1, opacity: 1, ease: Back.easeInOut},'-=0.4')
+            .to(box5,{y: 0, stagger: 0.1, opacity: 1, ease: Back.easeInOut},'-=0.4')
+            .to(top,{duration: 0.6, marginLeft: 10+'%', ease: Back.easeInOut},'-=0.4')
+            .to(bottom,{duration: 0.6, marginLeft: 10+'%', ease: Back.easeInOut},'-=0.4')
+            .to(title,{y: 0, opacity: 1, ease: Back.easeInOut},'-=0.4')
+            .to(moduleWrapper,{opacity: 0, ease: Back.easeInOut},'+=0.8')
         }
     }
 </script>
@@ -70,6 +71,11 @@
         -webkit-font-smoothing: subpixel-antialiased;
     }
     .background{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         background: radial-gradient(#656565,#000000);
         width: 100%;
         height: 100%;

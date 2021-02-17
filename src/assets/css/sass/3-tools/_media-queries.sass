@@ -57,6 +57,12 @@
     #app
         padding: 1.25rem
 @media screen and (max-width: 29.6875rem)
+    .nav_wrapper 
+        padding-left: 0.3125rem
+        width: 3.25rem
+        .side_nav ul .menu_links a .menu_icon_box
+            width: 2.5rem
+            height: 2.5rem
     #main_page_wrapper
         border-radius: 0
     .search_bar_wrapper
@@ -67,11 +73,29 @@
     .home_wrapper
         border-radius: 0
         max-height: 100%
-    .nav_wrapper
-        padding-left: 0.625rem
-        width: 3.25rem
     .main_content_wrapper .other_projects_wrapper .container, .search_content_wrapper .search_wrapper
         grid-row-gap: 2rem
 @media screen and (max-width: 28.75rem)
     .main_content_wrapper .other_projects_wrapper .container .projects p, .search_content_wrapper .search_wrapper .projects p
         margin: 0 0.71875rem 1.5625rem 1.15625rem
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape)
+    #app
+        padding: 0
+    .nav_wrapper
+        padding-left: 0.3125rem
+        width: 3.25rem
+        .side_nav ul .menu_links a .menu_icon_box
+            width: 2.5rem
+            height: 2.5rem
+    #main_page_wrapper
+        border-radius: 0
+    .search_bar_wrapper
+        padding-right: 0.9375rem
+    .main_content_wrapper, .details_wrapper, .about_content_wrapper, .skills_content_wrapper, .contact_content_wrapper, .search_content_wrapper
+        padding: 1.46875rem 0.9375rem 0 0.9375rem
+        border-radius: 1.25rem 0 0 0
+    .home_wrapper
+        border-radius: 0
+        max-height: 100%
+    .main_content_wrapper .other_projects_wrapper .container, .search_content_wrapper .search_wrapper
+        grid-row-gap: 2rem

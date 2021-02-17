@@ -11,7 +11,8 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    props: true
   },
   {
     path: '/projects/:id',
@@ -22,7 +23,8 @@ const routes = [
   {
     path: '/search_results/',
     name: 'Search_results',
-    component: Search_results
+    component: Search_results,
+    props: true
   },
   {
     path: '/about/',
