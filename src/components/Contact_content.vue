@@ -48,6 +48,7 @@ export default {
       this.last_name = ''
       this.email = ''
       this.message = ''
+      window.alert('Message was sent successfully!')
     },
   }
 }
