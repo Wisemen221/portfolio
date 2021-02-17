@@ -9,7 +9,7 @@
             <div class="menu_title">
                 <h3><span>MENU</span></h3>
             </div>
-            <ul>
+            <ul id="link_wrapper">
                 <li class="menu_links">
                     <router-link :to="{name:'Home'}">
                         <a href="javascript: void(0)" :id="home">

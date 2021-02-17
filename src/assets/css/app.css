@@ -193,8 +193,15 @@ input:focus {
   padding: 2.3125rem 0 1.84375rem 0.375rem;
 }
 
+.nav_wrapper .side_nav {
+  border: 1px solid #252238;
+  position: relative;
+}
+
 .nav_wrapper .side_nav .menu_title {
-  padding-bottom: 1.4375rem;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .nav_wrapper .side_nav .menu_title h3 {
@@ -204,8 +211,10 @@ input:focus {
 }
 
 .nav_wrapper .side_nav ul {
-  margin: 0;
+  margin: 40px 0 0 0;
   padding: 0;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .nav_wrapper .side_nav ul .menu_links:nth-child(2), .nav_wrapper .side_nav ul .menu_links:nth-child(3), .nav_wrapper .side_nav ul .menu_links:nth-child(4) {
@@ -809,6 +818,9 @@ input:focus {
   }
   .nav_wrapper .side_nav span {
     opacity: 0;
+  }
+  .nav_wrapper .side_nav #link_wrapper {
+    margin: 0;
   }
   .search_bar_wrapper .search_bar {
     width: 100%;
