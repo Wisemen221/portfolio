@@ -25,7 +25,7 @@
         .project_info_wrapper
             max-width: initial
         .suggested_project
-            padding: 6.25rem 0 0 0
+            padding: 9.375rem 0 0 0
             display: unset
 @media screen and (max-width: 59.375rem)
     .main_content_wrapper .feature_wrapper .featured_project_wrapper h2
@@ -57,15 +57,49 @@
     #app
         padding: 1.25rem
 @media screen and (max-width: 29.6875rem)
-    .nav_wrapper 
+    .search_content_wrapper
+        text-align: center
+        .search_wrapper .projects
+            text-align: left
+        h1
+            font-size: 1.5625rem
+    .contact_content_wrapper .content_container
+        text-align: center
+        .contact_form
+            text-align: left
+    .skills_content_wrapper .content_container
+        text-align: center
+        .rw-wrapper
+            .rw-sentence
+                padding-left: 12%
+                br
+                    display: none
+    .about_content_wrapper .content_container
+        text-align: center
+        .about_me_text
+            text-align: justify
+    .details_wrapper
+        .details_content
+            .project_info_wrapper
+                .info_title
+                    text-align: center
+                    .button_containers
+                        justify-content: center
+                .info_text p
+                    text-align: justify
+    .nav_wrapper
         padding-left: 0.3125rem
         width: 3.25rem
+        .logo_wrapper
+            left: 0.5rem
         .side_nav ul .menu_links a .menu_icon_box
             width: 2.5rem
             height: 2.5rem
     #main_page_wrapper
         border-radius: 0
     .search_bar_wrapper
+        position: unset
+        border-radius: 0
         padding-right: 0.9375rem
     .main_content_wrapper, .details_wrapper, .about_content_wrapper, .skills_content_wrapper, .contact_content_wrapper, .search_content_wrapper
         padding: 1.46875rem 0.9375rem 0 0.9375rem
@@ -74,6 +108,10 @@
         border-radius: 0
         max-height: 100%
         background-color: $dark_background_color
+    .main_content_wrapper
+        text-align: center
+        .container
+            text-align: left
     .main_content_wrapper .other_projects_wrapper .container, .search_content_wrapper .search_wrapper
         grid-row-gap: 2rem
 @media screen and (max-width: 28.75rem)

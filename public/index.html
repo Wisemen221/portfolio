@@ -63,9 +63,10 @@
 
       tl.to('.module',{scale: 1, duration: 1.5, delay: 1, ease: "elastic.out(1, 0.5)" })
       .to('.box',{duration: 0.8, y: 0, stagger: 0.1, opacity: 1, delay: 0.3, ease: Back.easeInOut},'-=0.8')
-      .to('.top_wrapper',{duration: 0.6, marginLeft: 10 +'%', ease: Back.easeInOut},'-=0.4')
-      .to('.bottom_wrapper',{duration: 0.6, marginLeft: 10 +'%', ease: Back.easeInOut},'-=0.4')
+      .to('.top_wrapper',{duration: 0.6, marginLeft: 12 +'%', ease: Back.easeInOut},'-=0.4')
+      .to('.bottom_wrapper',{duration: 0.6, marginLeft: 12 +'%', ease: Back.easeInOut},'-=0.4')
       .to('.title',{y: 0, opacity: 1, ease: Back.easeInOut},'-=0.4')
+      .to('.module_wrapper',{duration: 0.7, opacity: 0, ease: Back.easeInOut},'+=0.4')
     </script>
 
     <style>
@@ -94,8 +95,8 @@
           transform: perspective(0.0625rem) scale(1) translateZ(0);
           backface-visibility: hidden;
           text-align: center;
-          height: 13.4375rem;
-          width: 18.75rem;
+          height: 12.5rem;
+          width: 17.8125rem;
           margin: 0;
           padding: 0;
           border-radius: 0.75rem;
@@ -113,8 +114,8 @@
       .module{
           background-color: #fff;
           border-radius: 0.75rem;
-          width: 18.75rem;
-          height: 11.375rem;
+          height: 12.5rem;
+          width: 17.8125rem;
           margin: 0;
           padding: 0;
           transform: scale(0);
@@ -143,7 +144,7 @@
       }
       .box_1{
           width: 16.25rem;
-          height: 3.6rem;
+          height: 4.0625rem;
       }
       .box_2, .box_3, .box_4, .box_5{
           width: 2.875rem;

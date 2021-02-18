@@ -28,7 +28,7 @@ html, body {
           transform: perspective(0.0625rem) scale(1) translateZ(0);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  background-color: #060716;
+  background-color: linear-gradient(200deg, #D20B49, #000000 80%);
   width: 100%;
   height: 100%;
   overflow-x: hidden;
@@ -197,12 +197,18 @@ input:invalid {
 }
 
 .nav_wrapper .logo_wrapper {
+  position: absolute;
+  top: 0;
+  left: 1.9375rem;
   padding: 2.3125rem 0 1.84375rem 0.375rem;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 .nav_wrapper .side_nav {
   border: 1px solid #252238;
   position: relative;
+  margin-top: 6.085rem;
 }
 
 .nav_wrapper .side_nav .menu_title {
@@ -332,9 +338,12 @@ input:invalid {
   position: sticky;
   top: 0;
   padding: 1.84375rem 1.875rem 1.25rem 0;
+  border-radius: 0 1.25rem 0 0;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, #252238), to(rgba(31, 29, 43, 0)));
   background: linear-gradient(to bottom, #252238 90%, rgba(31, 29, 43, 0) 100%);
   z-index: 100;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 .search_bar_wrapper .search_bar {
@@ -574,6 +583,8 @@ input:invalid {
   font-weight: 500;
   line-height: 1.8rem;
   cursor: default;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 .details_wrapper .details_content .suggested_project {
@@ -612,6 +623,8 @@ input:invalid {
   height: auto;
   border-radius: 1.25rem 0 0 0;
   padding: 1.46875rem 1.875rem 0 2.9375rem;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 .search_content_wrapper h1 {
@@ -654,6 +667,8 @@ input:invalid {
   max-width: 32.875rem;
   width: 100%;
   height: auto;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 .about_content_wrapper .content_container h1 {
@@ -678,6 +693,8 @@ input:invalid {
   font-weight: 500;
   line-height: 1.8rem;
   cursor: default;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 .about_content_wrapper .content_container .about_me_text span {
@@ -696,6 +713,8 @@ input:invalid {
   max-width: 32.875rem;
   width: 100%;
   height: auto;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 .skills_content_wrapper .content_container h1 {
@@ -717,6 +736,8 @@ input:invalid {
   max-width: 32.875rem;
   width: 100%;
   height: auto;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 .contact_content_wrapper .content_container h1 {
@@ -859,7 +880,7 @@ input:invalid {
     max-width: initial;
   }
   .details_wrapper .details_content .suggested_project {
-    padding: 6.25rem 0 0 0;
+    padding: 9.375rem 0 0 0;
     display: unset;
   }
 }
@@ -919,9 +940,53 @@ input:invalid {
 }
 
 @media screen and (max-width: 29.6875rem) {
+  .search_content_wrapper {
+    text-align: center;
+  }
+  .search_content_wrapper .search_wrapper .projects {
+    text-align: left;
+  }
+  .search_content_wrapper h1 {
+    font-size: 1.5625rem;
+  }
+  .contact_content_wrapper .content_container {
+    text-align: center;
+  }
+  .contact_content_wrapper .content_container .contact_form {
+    text-align: left;
+  }
+  .skills_content_wrapper .content_container {
+    text-align: center;
+  }
+  .skills_content_wrapper .content_container .rw-wrapper .rw-sentence {
+    padding-left: 12%;
+  }
+  .skills_content_wrapper .content_container .rw-wrapper .rw-sentence br {
+    display: none;
+  }
+  .about_content_wrapper .content_container {
+    text-align: center;
+  }
+  .about_content_wrapper .content_container .about_me_text {
+    text-align: justify;
+  }
+  .details_wrapper .details_content .project_info_wrapper .info_title {
+    text-align: center;
+  }
+  .details_wrapper .details_content .project_info_wrapper .info_title .button_containers {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .details_wrapper .details_content .project_info_wrapper .info_text p {
+    text-align: justify;
+  }
   .nav_wrapper {
     padding-left: 0.3125rem;
     width: 3.25rem;
+  }
+  .nav_wrapper .logo_wrapper {
+    left: 0.5rem;
   }
   .nav_wrapper .side_nav ul .menu_links a .menu_icon_box {
     width: 2.5rem;
@@ -931,6 +996,8 @@ input:invalid {
     border-radius: 0;
   }
   .search_bar_wrapper {
+    position: unset;
+    border-radius: 0;
     padding-right: 0.9375rem;
   }
   .main_content_wrapper, .details_wrapper, .about_content_wrapper, .skills_content_wrapper, .contact_content_wrapper, .search_content_wrapper {
@@ -941,6 +1008,12 @@ input:invalid {
     border-radius: 0;
     max-height: 100%;
     background-color: #20192D;
+  }
+  .main_content_wrapper {
+    text-align: center;
+  }
+  .main_content_wrapper .container {
+    text-align: left;
   }
   .main_content_wrapper .other_projects_wrapper .container, .search_content_wrapper .search_wrapper {
     grid-row-gap: 2rem;
