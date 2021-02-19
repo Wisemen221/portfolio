@@ -2,22 +2,24 @@
     <header class="search_bar_wrapper">
         <div class="search_bar">
             <div class="input_wrapper">
-                <input @keydown="show_projects" ref="search" type="text" v-model="searchString" aria-label="Search" aria-labelledby="Search" placeholder="Search">
+                <input @keydown="show_projects" ref="search" type="text" v-model="searchString" aria-labelledby="Search" placeholder="Search">
                 <div class="search_icon"><i class="fas fa-search"></i></div>
             </div>
         </div>
     </header>
     <div class="search_content_wrapper">
-        <h1>Search For A Project</h1>
-        <div class="search_wrapper" v-show="empty">
-            <div class="projects" v-for="project in filtered_projects" :key="project.id" v-cloak>
-                <router-link :to="{name:'Project_details',params:{id:project.id}}">
-                    <div class="img_wrapper">
-                        <img class="project_image" :src="require(`@/assets/images/svg/${project.path}`)" alt="Projects">
-                    </div>
-                    <h5>{{ project.title }}</h5>
-                    <p>{{ project.description.substring(0, 50) + '...' }}</p>
-                </router-link>
+        <div class="search_container">
+            <h1>Search For A Project</h1>
+            <div class="search_wrapper" v-show="empty">
+                <div class="projects" v-for="project in filtered_projects" :key="project.id" v-cloak>
+                    <router-link :to="{name:'Project_details',params:{id:project.id}}">
+                        <div class="img_wrapper">
+                            <img class="project_image" :src="require(`@/assets/images/svg/${project.path}`)" alt="Projects">
+                        </div>
+                        <h5>{{ project.title }}</h5>
+                        <p>{{ project.description.substring(0, 50) + '...' }}</p>
+                    </router-link>
+                </div>
             </div>
         </div>
     </div>

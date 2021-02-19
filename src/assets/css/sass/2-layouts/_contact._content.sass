@@ -1,54 +1,69 @@
 //contact content layout
 .contact_content_wrapper
     width: 100%
-    height: auto
-    padding: 1.46875rem 1.875rem 0 2.9375rem
-    .content_container
-        max-width: 32.875rem
+    height: 100%
+    border-radius: 1.25rem 0 0 0
+    overflow: hidden
+    padding-bottom: 1.25rem
+    margin-bottom: 1.25rem
+    transition: all 0.4s ease
+    .contact_container
+        position: relative
         width: 100%
-        height: auto
-        transition: all 0.15s ease
-        h1
-            margin: 0 0 0.5625rem 0
-            cursor: default
-        .contact_form
-            input
-                border-radius: 0.4375rem
-                width: 100%
-                margin-bottom: 1.5625rem
-                &:focus::placeholder
-                    opacity: 0.4
-                &:not(:focus)
-                    color: $white
-            textarea
-                background-color: $search_bar_background
-                border: 0
-                border-radius: 0.4375rem
-                width: 100%
-                margin-bottom: 1.5625rem
-                padding: 0.515625rem 1rem
-                font-size: 1.3rem
-                font-weight: 600
-                color: $search_bar_text
-                &:focus
-                    color: $white
-                    box-shadow: none
-                &:focus::placeholder
-                    opacity: 0.4
-                &:not(:focus)
-                    color: $white
-                &:invalid
-                    box-shadow: none
-            .contact_btn
-                background-color: $button_blue
-                border-radius: 0.5rem
-                padding: 0.59375rem
-                width: 6.125rem
-                font-size: 1rem
-                font-weight: 600
-                transform: perspective(0.0625rem) scale(1) translateZ(0)
-                backface-visibility: hidden
-                -webkit-font-smoothing: subpixel-antialiased
-                transition: all 0.3s
-                &:hover
-                    transform: scale(0.8)
+        max-height: 100%
+        height: 100%
+        overflow-y: auto
+        padding: 1.46875rem 1.875rem 0 2.9375rem
+        transition: all 0.4s ease
+        .content_container
+            max-width: 32.875rem
+            width: 100%
+            height: auto
+            padding-bottom: 3.125rem
+            margin-bottom: 3.125rem
+            transition: all 0.4s ease
+            h1
+                margin: 0 0 0.5625rem 0
+                cursor: default
+            .contact_form
+                input
+                    border-radius: 0.4375rem
+                    width: 100%
+                    margin-bottom: 1.5625rem
+                    &:focus::placeholder
+                        opacity: 0.4
+                    &:not(:focus)
+                        color: $white
+                textarea
+                    background-color: $search_bar_background
+                    border: 0
+                    border-radius: 0.4375rem
+                    width: 100%
+                    margin-bottom: 1.5625rem
+                    padding: 0.515625rem 1rem
+                    font-size: 1.3rem
+                    font-weight: 600
+                    resize: both
+                    color: $search_bar_text
+                    &:focus
+                        color: $white
+                        box-shadow: none
+                    &:focus::placeholder
+                        opacity: 0.4
+                    &:not(:focus)
+                        color: $white
+                    &:invalid
+                        box-shadow: none
+                .contact_btn
+                    background-color: $button_blue
+                    border-radius: 0.5rem
+                    padding: 0.59375rem
+                    width: 6.125rem
+                    font-size: 1rem
+                    font-weight: 600
+                    transform: perspective(0.0625rem) scale(1) translateZ(0)
+                    backface-visibility: hidden
+                    -webkit-font-smoothing: subpixel-antialiased
+                    transition: all 0.3s
+                    &:hover
+                        transform: scale(0.8)

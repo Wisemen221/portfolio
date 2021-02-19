@@ -1,53 +1,64 @@
 //main content layout
 .main_content_wrapper
     width: 100%
-    height: auto
+    height: 100%
     border-radius: 1.25rem 0 0 0
-    padding: 1.46875rem 1.875rem 0 2.9375rem
+    overflow: hidden
+    padding-bottom: 1.25rem
+    margin-bottom: 1.25rem
     transition: all 0.4s ease
-    .feature_wrapper
-        h1
-            margin: 0 0 0.5625rem 0
-            cursor: default
-        .featured_project_wrapper
-            position: relative
-            width: 100%
-            height: 20.125rem
-            border-radius: 1.25rem
-            cursor: pointer
-            transform: perspective(0.0625rem) scale(1) translateZ(0)
-            backface-visibility: hidden
-            -webkit-font-smoothing: subpixel-antialiased
-            overflow: hidden
-            transition: all 0.3s
-            &:hover .featured_project
-                transform: scale(1.1)
-            .featured_project
+    .main_container
+        position: relative
+        width: 100%
+        max-height: 100%
+        height: 100%
+        overflow-y: auto
+        padding: 1.46875rem 1.875rem 0 2.9375rem
+        transition: all 0.4s ease
+        .feature_wrapper
+            h1
+                margin: 0 0 0.5625rem 0
+                cursor: default
+            .featured_project_wrapper
+                position: relative
                 width: 100%
-                height: 100%
-                object-fit: cover
+                height: 20.125rem
+                border-radius: 1.25rem
+                cursor: pointer
                 transform: perspective(0.0625rem) scale(1) translateZ(0)
                 backface-visibility: hidden
                 -webkit-font-smoothing: subpixel-antialiased
+                overflow: hidden
                 transition: all 0.3s
-            h2
-                position: absolute
-                top: 0
-                left: 0
-                padding: 3.59375rem 0 0 4.25rem
-                margin: 0
-                font-size: 2.5625rem
+                &:hover .featured_project
+                    transform: scale(1.1)
+                .featured_project
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                    transform: perspective(0.0625rem) scale(1) translateZ(0)
+                    backface-visibility: hidden
+                    -webkit-font-smoothing: subpixel-antialiased
+                    transition: all 0.3s
+                h2
+                    position: absolute
+                    top: 0
+                    left: 0
+                    padding: 3.59375rem 0 0 4.25rem
+                    margin: 0
+                    font-size: 2.5625rem
+                    font-weight: 500
+                    transform: perspective(0.0625rem) scale(1) translateZ(0)
+                    backface-visibility: hidden
+                    -webkit-font-smoothing: subpixel-antialiased
+                    z-index: 100
+                    transition: all 0.4s ease
+        .other_projects_wrapper
+            padding-bottom: 3.125rem
+            margin-bottom: 3.125rem
+            h4
+                display: block
+                margin: 1.4375rem 0 0.96875rem 0
+                font-size: 1.5625rem
                 font-weight: 500
-                transform: perspective(0.0625rem) scale(1) translateZ(0)
-                backface-visibility: hidden
-                -webkit-font-smoothing: subpixel-antialiased
-                z-index: 100
-                transition: all 0.4s ease
-    .other_projects_wrapper
-        padding-bottom: 1.5625rem
-        h4
-            display: block
-            margin: 1.4375rem 0 0.96875rem 0
-            font-size: 1.5625rem
-            font-weight: 500
-            cursor: default
+                cursor: default

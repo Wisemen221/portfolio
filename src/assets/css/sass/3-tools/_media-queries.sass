@@ -1,6 +1,6 @@
 //media queires tool
 @media screen and (max-width: 75rem)
-    .main_content_wrapper .other_projects_wrapper .container, .search_content_wrapper .search_wrapper
+    .main_content_wrapper .main_container .other_projects_wrapper .container, .search_content_wrapper .search_container .search_wrapper
         grid-template-columns: repeat(2, 1fr)
     .container .projects:nth-child(5)
         display: block
@@ -17,10 +17,10 @@
             form input
                 width: 50%
 @media screen and (max-width: 64.0625rem)
-    .details_wrapper .details_image
+    .details_wrapper .details_container .details_image
         height: 14.875rem
 @media screen and (max-width: 61.875rem)
-    .details_wrapper .details_content
+    .details_wrapper .details_container .details_content
         flex-direction: column
         .project_info_wrapper
             max-width: initial
@@ -28,65 +28,66 @@
             padding: 9.375rem 0 0 0
             display: unset
 @media screen and (max-width: 59.375rem)
-    .main_content_wrapper .feature_wrapper .featured_project_wrapper h2
+    .main_content_wrapper .main_container .feature_wrapper .featured_project_wrapper h2
         padding: 1.796875rem 0 0 2.125rem
         font-size: 1.5625rem
 @media screen and (max-width: 45.9375rem)
-    .main_content_wrapper .other_projects_wrapper .container, .search_content_wrapper .search_wrapper
+    .main_content_wrapper .main_container .other_projects_wrapper .container, .search_content_wrapper .search_container .search_wrapper
         grid-template-columns: 1fr
-    .main_content_wrapper .feature_wrapper .featured_project_wrapper
+    .main_content_wrapper .main_container .feature_wrapper .featured_project_wrapper
         height: 17rem
 @media screen and (max-width: 40.625rem)
     .search_bar_wrapper form a input
         width: 70%
         margin-left: 10%
-    .main_content_wrapper .feature_wrapper .featured_project_wrapper
+    .main_content_wrapper .main_container .feature_wrapper .featured_project_wrapper
         height: 14.875rem
-    .main_content_wrapper .feature_wrapper .featured_project_wrapper h2
+    .main_content_wrapper .main_container .feature_wrapper .featured_project_wrapper h2
         opacity: 0
 @media screen and (max-width: 39.0625rem)
-    .skills_content_wrapper .content_container .rw-wrapper .break
+    .skills_content_wrapper .skills_container .content_container .rw-wrapper .break
         display: inline
-    .details_wrapper .details_content .project_info_wrapper .info_title
+    .details_wrapper .details_container .details_content .project_info_wrapper .info_title
         flex-direction: column
-    .details_wrapper .details_content .project_info_wrapper .info_title .button_containers
+    .details_wrapper .details_container .details_content .project_info_wrapper .info_title .button_containers
         margin-top: 2.25rem
-    .details_wrapper .details_content .suggested_project
+    .details_wrapper .details_container .details_content .suggested_project
         margin-bottom: 1.25rem
 @media screen and (min-width: 29.75rem)
     #app
         padding: 1.25rem
 @media screen and (max-width: 29.6875rem)
-    .search_content_wrapper
+    .search_content_wrapper .search_container
         text-align: center
         .search_wrapper .projects
             text-align: left
         h1
             font-size: 1.5625rem
-    .contact_content_wrapper .content_container
+    .contact_content_wrapper .contact_container .content_container
         text-align: center
         .contact_form
             text-align: left
-    .skills_content_wrapper .content_container
+    .skills_content_wrapper .skills_container .content_container
         text-align: center
         .rw-wrapper
             .rw-sentence
                 padding-left: 12%
                 br
                     display: none
-    .about_content_wrapper .content_container
+    .about_content_wrapper .about_container .content_container
         text-align: center
         .about_me_text
             text-align: justify
     .details_wrapper
-        .details_content
-            .project_info_wrapper
-                .info_title
-                    text-align: center
-                    .button_containers
-                        justify-content: center
-                .info_text p
-                    text-align: justify
+        .details_container
+            .details_content
+                .project_info_wrapper
+                    .info_title
+                        text-align: center
+                        .button_containers
+                            justify-content: center
+                    .info_text p
+                        text-align: justify
     .nav_wrapper
         padding-left: 0.3125rem
         width: 3.25rem
@@ -98,24 +99,23 @@
     #main_page_wrapper
         border-radius: 0
     .search_bar_wrapper
-        position: unset
         border-radius: 0
         padding-right: 0.9375rem
-    .main_content_wrapper, .details_wrapper, .about_content_wrapper, .skills_content_wrapper, .contact_content_wrapper, .search_content_wrapper
+    .main_content_wrapper .main_container, .details_wrapper .details_container, .about_content_wrapper .about_container, .skills_content_wrapper .skills_container, .contact_content_wrapper .contact_container, .search_content_wrapper .search_container
         padding: 1.46875rem 0.9375rem 0 0.9375rem
         border-radius: 1.25rem 0 0 0
     .home_wrapper
         border-radius: 0
         max-height: 100%
         background-color: $dark_background_color
-    .main_content_wrapper
+    .main_content_wrapper .main_container
         text-align: center
         .container
             text-align: left
-    .main_content_wrapper .other_projects_wrapper .container, .search_content_wrapper .search_wrapper
+    .main_content_wrapper .main_container .other_projects_wrapper .container, .search_content_wrapper .search_container .search_wrapper
         grid-row-gap: 2rem
 @media screen and (max-width: 28.75rem)
-    .main_content_wrapper .other_projects_wrapper .container .projects p, .search_content_wrapper .search_wrapper .projects p
+    .main_content_wrapper .main_container .other_projects_wrapper .container .projects p, .search_content_wrapper .search_container .search_wrapper .projects p
         margin: 0 0.71875rem 1.5625rem 1.15625rem
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape)
     #app
@@ -130,11 +130,11 @@
         border-radius: 0
     .search_bar_wrapper
         padding-right: 0.9375rem
-    .main_content_wrapper, .details_wrapper, .about_content_wrapper, .skills_content_wrapper, .contact_content_wrapper, .search_content_wrapper
+    .main_content_wrapper .main_container, .details_wrapper .details_container, .about_content_wrapper .about_container, .skills_content_wrapper .skills_container, .contact_content_wrapper .contact_container, .search_content_wrapper .search_container
         padding: 1.46875rem 0.9375rem 0 0.9375rem
         border-radius: 1.25rem 0 0 0
     .home_wrapper
         border-radius: 0
         max-height: 100%
-    .main_content_wrapper .other_projects_wrapper .container, .search_content_wrapper .search_wrapper
+    .main_content_wrapper .main_container .other_projects_wrapper .container, .search_content_wrapper .search_container .search_wrapper
         grid-row-gap: 2rem

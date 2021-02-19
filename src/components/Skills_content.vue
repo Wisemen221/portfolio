@@ -1,29 +1,31 @@
 <template>
     <div class="skills_content_wrapper">
-        <div class="content_container">
-            <h1>Skills & Knowledge</h1>
-            <div class="line_break"></div>
-            <section class="rw-wrapper">
-				<h2 class="rw-sentence">
-					<span>Don't worry, </span>
-					<br />
-					<span>I have skills and experience <br class="break" />in</span>
-					<div class="rw-words rw-words-1">
-						<span>HTML</span>
-						<span>CSS</span>
-						<span>JAVASCRIPT</span>
-						<span>SASS</span>
-						<span>BOOTSTRAP</span>
-						<span>JQUERY</span>
-						<span>VUE</span>
-						<span>WORDPRESS</span>
-						<span>ADOBE</span>
-						<span>DATABASE</span>
-						<span>GIT</span>
-						<span>GITHUB</span>
-					</div>
-				</h2>
-			</section>
+        <div class="skills_container">
+            <div class="content_container">
+                <h1>Skills & Knowledge</h1>
+                <div class="line_break"></div>
+                <section class="rw-wrapper">
+                    <h2 class="rw-sentence">
+                        <span>Don't worry, </span>
+                        <br />
+                        <span>I have skills and experience <br class="break" />in</span>
+                        <div class="rw-words rw-words-1">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JAVASCRIPT</span>
+                            <span>SASS</span>
+                            <span>BOOTSTRAP</span>
+                            <span>JQUERY</span>
+                            <span>VUE</span>
+                            <span>WORDPRESS</span>
+                            <span>ADOBE</span>
+                            <span>DATABASE</span>
+                            <span>GIT</span>
+                            <span>GITHUB</span>
+                        </div>
+                    </h2>
+                </section>
+            </div>
         </div>
     </div>
 </template>1
