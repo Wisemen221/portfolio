@@ -8,8 +8,8 @@
                         <div class="info_title">
                             <h2>{{ project.title }}</h2>
                             <div class="button_containers">
-                                <button aria-label="GitHub Link"><i class="fab fa-github"></i> Code</button>
-                                <button aria-label="External Porject Link"><i class="fas fa-external-link-square-alt"></i> Link</button>
+                                <button @click="open_code" aria-label="GitHub Link"><i class="fab fa-github"></i> Code</button>
+                                <button @click="open_link" aria-label="External Porject Link"><i class="fas fa-external-link-square-alt"></i> Link</button>
                             </div>
                         </div>
                         <div class="line_break"></div>
@@ -48,6 +48,22 @@ export default {
         load()
         
         return { coming_soon, alert_user }
+    },
+    methods:{
+        open_link(){
+            if(this.project.link){
+                window.location.href = this.project.link
+            }else{
+                window.alert('Project is not available at this time')
+            }
+        },
+        open_code(){
+            if(this.project.code){
+                window.location.href = this.project.code
+            }else{
+                window.alert('The project code is not available at this time')
+            }
+        }
     }
 }
 </script>
