@@ -471,7 +471,7 @@ input:invalid {
   display: block;
   margin: 1.4375rem 0 0.96875rem 0;
   font-size: 1.5625rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: default;
 }
 
@@ -762,7 +762,6 @@ input:invalid {
 .about_content_wrapper .about_container .content_container .about_me_text span {
   cursor: pointer;
   color: #32A7E2;
-  font-weight: 600;
 }
 
 .skills_content_wrapper {
@@ -945,6 +944,10 @@ input:invalid {
 @media screen and (max-width: 68.125rem) {
   .nav_wrapper {
     width: 5.625rem;
+  }
+  .nav_wrapper .logo_wrapper {
+    top: 0;
+    left: 1.75rem;
   }
   .nav_wrapper .side_nav span {
     opacity: 0;
