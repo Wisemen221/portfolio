@@ -15,6 +15,8 @@
                         <div class="line_break"></div>
                         <div class="info_text">
                             <p>{{ project.description }}</p>
+                            <br>
+                            <p v-if="project.company">Company: <a style="color: #32dae6" :href="`${project.company}`" target="_blank">Shoesters</a></p>
                         </div>
                     </div>
                     <div class="suggested_project">
@@ -38,7 +40,6 @@ import get_projects from '../composables/get_projects'
 export default {
     props: ['project'],
     setup(){
-
         const alert_user = ()=>{
             window.alert('Sorry! Project is still under developement')
         }
