@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import Welcome_animation from '../components/Welcome_animation'
 import get_projects from '../composables/get_projects'
 import Side_nav from '../components/Side_nav'
 import Search_bar from '../components/Search_bar'
@@ -17,7 +16,7 @@ import Main_content from '../components/Main_content'
 
 export default {
     name: 'Home',
-    components: { Side_nav, Search_bar, Main_content, Welcome_animation },
+    components: { Side_nav, Search_bar, Main_content },
     data(){
         return {
             home: 'home',
