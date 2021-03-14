@@ -16,7 +16,7 @@
                         <div class="info_text">
                             <p>{{ project.description }}</p>
                             <br>
-                            <p v-if="project.company">Company: <a style="color: #32dae6" :href="`${project.company}`" target="_blank">Shoesters</a></p>
+                            <p v-if="project.company">Company: <a style="color: #32dae6" :href="`${project.company}`" target="_blank">{{ project.name }}</a></p>
                         </div>
                     </div>
                     <div class="suggested_project">
