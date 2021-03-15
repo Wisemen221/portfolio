@@ -6,9 +6,9 @@
                 <div class="line_break"></div>
                 <section class="rw-wrapper">
                     <h2 class="rw-sentence">
-                        <span>Don't worry, </span>
+                        <!-- <span>Don't worry, </span>
                         <br />
-                        <span>I have skills and experience <br class="break" />in</span>
+                        <span>I have skills and experience <br class="break" />in</span> -->
                         <div class="rw-words rw-words-1">
                             <span>HTML</span>
                             <span>CSS</span>
