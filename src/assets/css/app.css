@@ -116,6 +116,10 @@ input:invalid {
   box-shadow: none;
 }
 
+textarea {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
 .home_wrapper {
   position: relative;
   display: flex;
@@ -721,7 +725,7 @@ input:invalid {
   width: 100%;
   margin-bottom: 1.5625rem;
   padding: 0.515625rem 1rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif !important;
   font-size: 0.9375rem;
   font-weight: 600;
   resize: both;
