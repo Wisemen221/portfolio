@@ -11,7 +11,7 @@
           <br>
           <input v-model="email" name="email" type="email" aria-labelledby="Email" placeholder="Email" required>
           <br>
-          <textarea v-model="message" name="message" aria-labelledby="Message" placeholder="Message Me" cols="30" rows="6" required></textarea>
+          <textarea v-model="message" name="message" aria-labelledby="Message" placeholder="Message" cols="30" rows="6" required></textarea>
           <br>
           <button class="contact_btn" type="submit" aria-label="Submit"><i class="fas fa-paper-plane"></i> Send</button>
         </form>
