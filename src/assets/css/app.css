@@ -634,6 +634,15 @@ textarea {
   color: #32dae6;
 }
 
+.about_content_wrapper .about_container .content_container .links {
+  display: flex;
+  font-size: 35px;
+}
+
+.about_content_wrapper .about_container .content_container .links .linkedin {
+  margin-right: 15px;
+}
+
 .skills_content_wrapper {
   width: 100%;
   height: 100%;

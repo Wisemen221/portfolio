@@ -36,8 +36,7 @@
     }
     .rw-sentence{
         margin: 0;
-        font-size: 1.115rem;
-        font-weight: 500;
+        font-size: 20px;
         line-height: 1.8rem;
         cursor: default;
         text-align: left;
@@ -51,7 +50,7 @@
         position: absolute;
         opacity: 0;
         overflow: hidden;
-        color: #FF9100;
+        color: #FFFFFF;
         animation: rotateWord 25s linear infinite 0s;
     }
     .rw-words-1 span:nth-child(2) { 
@@ -92,8 +91,8 @@
         1% { opacity: 0; transform: translateY(1.875rem); }
         5% { opacity: 1; transform: translateY(0);}
         11% { opacity: 1; transform: translateY(0); }
-        12% { opacity: 0.1;}
-        13% { opacity: 0;}
+        /* 12% { opacity: 0.1;} */
+        /* 13% { opacity: 0;} */
         14% { opacity: 0; transform: translateY(-1.875rem); }
         80% { opacity: 0; }
         100% { opacity: 0; }

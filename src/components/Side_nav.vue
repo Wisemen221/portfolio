@@ -2,7 +2,7 @@
     <div class="nav_wrapper">
         <div class="logo_wrapper">
             <router-link :to="{name:'Home'}">
-                <img src="../assets/images/svg/fox_logo.svg" alt="logo">
+                <img aria-label="Logo" src="../assets/images/svg/fox_logo.svg" alt="logo" loading="eager">
             </router-link>
         </div>
         <nav class="side_nav">
