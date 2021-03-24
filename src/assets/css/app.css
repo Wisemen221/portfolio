@@ -612,6 +612,7 @@ textarea {
 .about_content_wrapper .about_container .content_container .user_pic {
   width: 3.3125rem;
   height: 3.3125rem;
+  margin-left: 1.125rem;
   border-radius: 100%;
 }
 
@@ -876,32 +877,14 @@ textarea {
 }
 
 @media screen and (max-width: 29.6875rem) {
-  .search_content_wrapper .search_container {
-    text-align: center;
-  }
   .search_content_wrapper .search_container .search_wrapper .projects {
     text-align: left;
   }
   .search_content_wrapper .search_container h1 {
     font-size: 1.5625rem;
   }
-  .contact_content_wrapper .contact_container .content_container {
-    text-align: center;
-  }
   .contact_content_wrapper .contact_container .content_container .contact_form {
     text-align: left;
-  }
-  .skills_content_wrapper .skills_container .content_container {
-    text-align: center;
-  }
-  .skills_content_wrapper .skills_container .content_container .rw-wrapper .rw-sentence {
-    padding-left: 12%;
-  }
-  .skills_content_wrapper .skills_container .content_container .rw-wrapper .rw-sentence br {
-    display: none;
-  }
-  .about_content_wrapper .about_container .content_container {
-    text-align: center;
   }
   .about_content_wrapper .about_container .content_container .about_me_text {
     text-align: justify;
@@ -947,9 +930,6 @@ textarea {
     border-radius: 0;
     max-height: 100%;
     background-color: #20192D;
-  }
-  .main_content_wrapper .main_container {
-    text-align: center;
   }
   .main_content_wrapper .main_container .container {
     text-align: left;

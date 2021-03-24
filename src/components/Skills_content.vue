@@ -42,10 +42,10 @@
         text-align: left;
         transition: all 0.15s ease;
     }
-    .rw-words{
+    /* .rw-words{
         display: inline;
         text-indent: 0.375rem;
-    }
+    } */
     .rw-words-1 span{
         position: absolute;
         opacity: 0;
