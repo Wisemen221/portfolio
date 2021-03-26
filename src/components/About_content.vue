@@ -18,7 +18,7 @@
                     me!<br><br>
                 </p>
                 <div class="links">
-                    <a class="linkedin" href="www.linkedin.com/in/theron-bogan-574b98209"><i class="fab fa-linkedin"></i></a>
+                    <a class="linkedin" href="https://www.linkedin.com/in/theron-bogan-574b98209/"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/Wisemen221?tab=repositories"><i class="fab fa-github-square"></i></a>
                 </div>
             </div>
