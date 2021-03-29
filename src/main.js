@@ -7,4 +7,4 @@ import './assets/css/app.css'
 
 setTimeout(()=>{
     createApp(App).use(router).mount('#app')
-},4500)
+},2500)

@@ -30,36 +30,37 @@
         .suggested_project
             padding: 9.375rem 0 0 0
             display: unset
-@media screen and (max-width: 59.375rem)
-    .main_content_wrapper .main_container .feature_wrapper .featured_project_wrapper h2
-        padding: 1.796875rem 0 0 2.125rem
-        font-size: 1.5625rem
 @media screen and (max-width: 45.9375rem)
+    .skills_content_wrapper .skills_container .content_container .skills_section
+        grid-template-columns: repeat(2, 1fr)
     .main_content_wrapper .main_container .other_projects_wrapper .container, .search_content_wrapper .search_container .search_wrapper
         grid-template-columns: 1fr
     .main_content_wrapper .main_container .feature_wrapper .featured_project_wrapper
-        height: 17rem
+        height: 278px
+        .img_wrapper
+            height: 7.9375rem
 @media screen and (max-width: 40.625rem)
     .search_bar_wrapper form a input
         width: 70%
         margin-left: 10%
-    .main_content_wrapper .main_container .feature_wrapper .featured_project_wrapper
-        height: 14.875rem
     .main_content_wrapper .main_container .feature_wrapper .featured_project_wrapper h2
         opacity: 0
 @media screen and (max-width: 39.0625rem)
-    .skills_content_wrapper .skills_container .content_container .rw-wrapper .break
-        display: inline
     .details_wrapper .details_container .details_content .project_info_wrapper .info_title
         flex-direction: column
     .details_wrapper .details_container .details_content .project_info_wrapper .info_title .button_containers
         margin-top: 2.25rem
     .details_wrapper .details_container .details_content .suggested_project
         margin-bottom: 1.25rem
+@media screen and (max-width: 34.0625rem)
+    .skills_content_wrapper .skills_container .content_container .skills_section
+        grid-template-columns: 1fr
 @media screen and (min-width: 29.75rem)
     #app
         padding: 1.25rem
 @media screen and (max-width: 29.6875rem)
+    .skills_content_wrapper .skills_container .content_container .skills_section
+        grid-template-columns: repeat(2, 1fr)
     .search_content_wrapper .search_container
         // text-align: center
         .search_wrapper .projects
@@ -70,8 +71,6 @@
         // text-align: center
         .contact_form
             text-align: left
-    .skills_content_wrapper .skills_container .content_container
-        // text-align: center
     .about_content_wrapper .about_container .content_container
         // text-align: center
         .about_me_text
@@ -105,7 +104,7 @@
         border-radius: 0
         padding-right: 0.9375rem
     .main_content_wrapper .main_container, .details_wrapper .details_container, .about_content_wrapper .about_container, .skills_content_wrapper .skills_container, .contact_content_wrapper .contact_container, .search_content_wrapper .search_container
-        padding: 1.46875rem 0.9375rem 0 0.9375rem
+        padding: 1.46875rem 0.9375rem 100px 0.9375rem
         border-radius: 1.25rem 0 0 0
     .home_wrapper
         border-radius: 0
@@ -120,6 +119,9 @@
 @media screen and (max-width: 28.75rem)
     .main_content_wrapper .main_container .other_projects_wrapper .container .projects p, .search_content_wrapper .search_container .search_wrapper .projects p
         margin: 0 0.71875rem 1.5625rem 1.15625rem
+@media screen and (max-width: 25.625rem)
+    .skills_content_wrapper .skills_container .content_container .skills_section
+        grid-template-columns: 1fr
 @media only screen and (min-device-width: 23.4375rem) and (max-device-width: 50.75rem) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape)
     #app
         padding: 0
@@ -134,7 +136,7 @@
     .search_bar_wrapper
         padding-right: 0.9375rem
     .main_content_wrapper .main_container, .details_wrapper .details_container, .about_content_wrapper .about_container, .skills_content_wrapper .skills_container, .contact_content_wrapper .contact_container, .search_content_wrapper .search_container
-        padding: 1.46875rem 0.9375rem 0 0.9375rem
+        padding: 1.46875rem 0.9375rem 100px 0.9375rem
         border-radius: 1.25rem 0 0 0
     .home_wrapper
         border-radius: 0

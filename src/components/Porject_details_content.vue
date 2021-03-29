@@ -25,7 +25,7 @@
                                 <img class="project_image" :src="require(`@/assets/images/svg/${soon.path}`)" alt="Flashcard Project">
                             </div>
                             <h5>{{ soon.title }}</h5>
-                            <p>{{ soon.description.substring(0, 100) + '...' }}</p>
+                            <p>{{ soon.description }}</p>
                         </div>
                     </div>
                 </div>

@@ -3,12 +3,13 @@
         <div class="main_container">
             <div class="feature_wrapper" v-show="featured_project.length">
                 <h1>Feature</h1>
-                <div v-for="feature in featured_project" :key="feature.id" v-cloak>
+                <div class="featured_project_wrapper" v-for="feature in featured_project" :key="feature.id" v-cloak>
                     <router-link :to="{name:'Project_details',params:{id:id}}">
-                        <div class="featured_project_wrapper">
-                            <h2>{{ feature.title }}</h2>
-                            <img class="featured_project" :src="require(`@/assets/images/svg/${feature.path}`)" alt="Featured Project">
+                        <div class="img_wrapper">
+                            <img class="project_image" :src="require(`@/assets/images/svg/${feature.path}`)" alt="Featured Project">
                         </div>
+                        <h5>{{ feature.title }}</h5>
+                        <p>{{ feature.description }}</p>
                     </router-link>
                 </div>
             </div>

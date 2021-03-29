@@ -13,7 +13,7 @@
                 <li class="menu_links">
                     <router-link :to="{name:'Home'}">
                         <a href="#" :id="home">
-                            <div class="menu_icon_box projects"><i class="fas fa-toolbox"></i></div>
+                            <div class="menu_icon_box all_projects"><i class="fas fa-toolbox"></i></div>
                             <span>Projects</span>
                         </a>
                     </router-link>
@@ -49,7 +49,7 @@
 </template>
 
 <script>
-export default {
-    props: ['home','about','skills','contact']
-}
+    export default {
+        props: ['home','about','skills','contact']
+    }
 </script>

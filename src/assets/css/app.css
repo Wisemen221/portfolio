@@ -69,7 +69,7 @@ button {
 .projects {
   border-radius: 1.25rem;
   width: 100%;
-  height: 100%;
+  height: 278px;
   background-color: #242835;
   overflow: hidden;
   cursor: pointer;
@@ -81,6 +81,17 @@ button {
 
 .projects:hover .project_image {
   transform: scale(1.2);
+}
+
+.projects::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 52px;
+  background: linear-gradient(rgba(36, 40, 53, 0.6) 1%, #242835 90%);
+  z-index: 2;
 }
 
 .projects .img_wrapper {
@@ -157,7 +168,7 @@ textarea {
 }
 
 .nav_wrapper .side_nav {
-  border: 0.0625rem solid #252238;
+  padding-top: 0.0625rem;
   position: relative;
   margin-top: 6.085rem;
 }
@@ -242,7 +253,7 @@ textarea {
   color: #ffffff;
 }
 
-#home .projects {
+#home .all_projects {
   background-color: #FF7551;
 }
 
@@ -335,44 +346,53 @@ textarea {
 
 .main_content_wrapper .main_container .feature_wrapper .featured_project_wrapper {
   position: relative;
+  border-radius: 1.25rem;
   width: 100%;
   height: 20.125rem;
-  border-radius: 1.25rem;
+  background-color: #242835;
+  overflow: hidden;
   cursor: pointer;
   transform: perspective(0.0625rem) scale(1) translateZ(0);
   backface-visibility: hidden;
   -webkit-font-smoothing: subpixel-antialiased;
+  transition: all 0.4s ease;
+}
+
+.main_content_wrapper .main_container .feature_wrapper .featured_project_wrapper:hover .project_image {
+  transform: scale(1.2);
+}
+
+.main_content_wrapper .main_container .feature_wrapper .featured_project_wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(rgba(36, 40, 53, 0.6) 1%, #242835 90%);
+  z-index: 2;
+}
+
+.main_content_wrapper .main_container .feature_wrapper .featured_project_wrapper h5 {
+  margin: 1rem 1.15625rem 1.125rem 1.15625rem;
+}
+
+.main_content_wrapper .main_container .feature_wrapper .featured_project_wrapper p {
+  margin: 0 0.71875rem 3.125rem 1.15625rem;
+}
+
+.main_content_wrapper .main_container .feature_wrapper .featured_project_wrapper .img_wrapper {
+  width: 100%;
+  height: 200px;
   overflow: hidden;
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
 }
 
-.main_content_wrapper .main_container .feature_wrapper .featured_project_wrapper:hover .featured_project {
-  transform: scale(1.1);
-}
-
-.main_content_wrapper .main_container .feature_wrapper .featured_project_wrapper .featured_project {
+.main_content_wrapper .main_container .feature_wrapper .featured_project_wrapper .img_wrapper .project_image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: perspective(0.0625rem) scale(1) translateZ(0);
-  backface-visibility: hidden;
-  -webkit-font-smoothing: subpixel-antialiased;
-  transition: all 0.3s;
-}
-
-.main_content_wrapper .main_container .feature_wrapper .featured_project_wrapper h2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 3.59375rem 0 0 4.25rem;
-  margin: 0;
-  font-size: 2.5625rem;
-  font-weight: 500;
-  transform: perspective(0.0625rem) scale(1) translateZ(0);
-  backface-visibility: hidden;
-  -webkit-font-smoothing: subpixel-antialiased;
-  z-index: 100;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease-out;
 }
 
 .main_content_wrapper .main_container .other_projects_wrapper {
@@ -604,6 +624,10 @@ textarea {
   transition: all 0.4s ease;
 }
 
+.about_content_wrapper .about_container .content_container .color {
+  color: #fdac4e;
+}
+
 .about_content_wrapper .about_container .content_container h1 {
   margin: 0 0 0.5625rem 0;
   cursor: default;
@@ -619,6 +643,7 @@ textarea {
 .about_content_wrapper .about_container .content_container h6 {
   margin: 0.5rem 0 0 0;
   cursor: default;
+  line-height: 22px;
 }
 
 .about_content_wrapper .about_container .content_container .about_me_text {
@@ -660,7 +685,7 @@ textarea {
   max-height: 100%;
   height: 100%;
   overflow-y: auto;
-  padding: 1.46875rem 1.875rem 0 2.9375rem;
+  padding: 1.46875rem 2.9375rem 100px 2.9375rem;
   transition: all 0.4s ease;
 }
 
@@ -676,8 +701,28 @@ textarea {
   cursor: default;
 }
 
-.skills_content_wrapper .skills_container .content_container .rw-wrapper .break {
-  display: none;
+.skills_content_wrapper .skills_container .content_container .skills_section {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1.25rem;
+  grid-row-gap: 1.25rem;
+  transition: all 4s ease;
+}
+
+.skills_content_wrapper .skills_container .content_container .skills_section .skills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.25rem;
+  width: 100%;
+  background-color: #242835;
+  overflow: hidden;
+  cursor: default;
+  transform: perspective(0.0625rem) scale(1) translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  transition: all 0.4s ease;
 }
 
 .contact_content_wrapper {
@@ -826,19 +871,18 @@ textarea {
   }
 }
 
-@media screen and (max-width: 59.375rem) {
-  .main_content_wrapper .main_container .feature_wrapper .featured_project_wrapper h2 {
-    padding: 1.796875rem 0 0 2.125rem;
-    font-size: 1.5625rem;
-  }
-}
-
 @media screen and (max-width: 45.9375rem) {
+  .skills_content_wrapper .skills_container .content_container .skills_section {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .main_content_wrapper .main_container .other_projects_wrapper .container, .search_content_wrapper .search_container .search_wrapper {
     grid-template-columns: 1fr;
   }
   .main_content_wrapper .main_container .feature_wrapper .featured_project_wrapper {
-    height: 17rem;
+    height: 278px;
+  }
+  .main_content_wrapper .main_container .feature_wrapper .featured_project_wrapper .img_wrapper {
+    height: 7.9375rem;
   }
 }
 
@@ -847,18 +891,12 @@ textarea {
     width: 70%;
     margin-left: 10%;
   }
-  .main_content_wrapper .main_container .feature_wrapper .featured_project_wrapper {
-    height: 14.875rem;
-  }
   .main_content_wrapper .main_container .feature_wrapper .featured_project_wrapper h2 {
     opacity: 0;
   }
 }
 
 @media screen and (max-width: 39.0625rem) {
-  .skills_content_wrapper .skills_container .content_container .rw-wrapper .break {
-    display: inline;
-  }
   .details_wrapper .details_container .details_content .project_info_wrapper .info_title {
     flex-direction: column;
   }
@@ -870,6 +908,12 @@ textarea {
   }
 }
 
+@media screen and (max-width: 34.0625rem) {
+  .skills_content_wrapper .skills_container .content_container .skills_section {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media screen and (min-width: 29.75rem) {
   #app {
     padding: 1.25rem;
@@ -877,6 +921,9 @@ textarea {
 }
 
 @media screen and (max-width: 29.6875rem) {
+  .skills_content_wrapper .skills_container .content_container .skills_section {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .search_content_wrapper .search_container .search_wrapper .projects {
     text-align: left;
   }
@@ -923,7 +970,7 @@ textarea {
     padding-right: 0.9375rem;
   }
   .main_content_wrapper .main_container, .details_wrapper .details_container, .about_content_wrapper .about_container, .skills_content_wrapper .skills_container, .contact_content_wrapper .contact_container, .search_content_wrapper .search_container {
-    padding: 1.46875rem 0.9375rem 0 0.9375rem;
+    padding: 1.46875rem 0.9375rem 100px 0.9375rem;
     border-radius: 1.25rem 0 0 0;
   }
   .home_wrapper {
@@ -942,6 +989,12 @@ textarea {
 @media screen and (max-width: 28.75rem) {
   .main_content_wrapper .main_container .other_projects_wrapper .container .projects p, .search_content_wrapper .search_container .search_wrapper .projects p {
     margin: 0 0.71875rem 1.5625rem 1.15625rem;
+  }
+}
+
+@media screen and (max-width: 25.625rem) {
+  .skills_content_wrapper .skills_container .content_container .skills_section {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -964,7 +1017,7 @@ textarea {
     padding-right: 0.9375rem;
   }
   .main_content_wrapper .main_container, .details_wrapper .details_container, .about_content_wrapper .about_container, .skills_content_wrapper .skills_container, .contact_content_wrapper .contact_container, .search_content_wrapper .search_container {
-    padding: 1.46875rem 0.9375rem 0 0.9375rem;
+    padding: 1.46875rem 0.9375rem 100px 0.9375rem;
     border-radius: 1.25rem 0 0 0;
   }
   .home_wrapper {

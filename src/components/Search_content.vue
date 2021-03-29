@@ -17,7 +17,7 @@
                             <img class="project_image" :src="require(`@/assets/images/svg/${project.path}`)" alt="Projects">
                         </div>
                         <h5>{{ project.title }}</h5>
-                        <p>{{ project.description.substring(0, 50) + '...' }}</p>
+                        <p>{{ project.description }}</p>
                     </router-link>
                 </div>
             </div>

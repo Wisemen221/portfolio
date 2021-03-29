@@ -21,38 +21,41 @@
                 cursor: default
             .featured_project_wrapper
                 position: relative
+                border-radius: 1.25rem
                 width: 100%
                 height: 20.125rem
-                border-radius: 1.25rem
+                background-color: $project_background
+                overflow: hidden
                 cursor: pointer
                 transform: perspective(0.0625rem) scale(1) translateZ(0)
                 backface-visibility: hidden
                 -webkit-font-smoothing: subpixel-antialiased
-                overflow: hidden
-                transition: all 0.3s
-                &:hover .featured_project
-                    transform: scale(1.1)
-                .featured_project
-                    width: 100%
-                    height: 100%
-                    object-fit: cover
-                    transform: perspective(0.0625rem) scale(1) translateZ(0)
-                    backface-visibility: hidden
-                    -webkit-font-smoothing: subpixel-antialiased
-                    transition: all 0.3s
-                h2
+                transition: all 0.4s ease
+                &:hover .project_image
+                    transform: scale(1.2)
+                &::after
+                    content: ''
                     position: absolute
-                    top: 0
+                    bottom: -2px
                     left: 0
-                    padding: 3.59375rem 0 0 4.25rem
-                    margin: 0
-                    font-size: 2.5625rem
-                    font-weight: 500
-                    transform: perspective(0.0625rem) scale(1) translateZ(0)
-                    backface-visibility: hidden
-                    -webkit-font-smoothing: subpixel-antialiased
-                    z-index: 100
-                    transition: all 0.4s ease
+                    width: 100%
+                    height: 50px
+                    background: linear-gradient(rgba(36,40,53,0.6) 1%, $project_background 90%)
+                    z-index: 2
+                h5
+                    margin: 1rem 1.15625rem 1.125rem 1.15625rem
+                p
+                    margin: 0 0.71875rem 3.125rem 1.15625rem
+                .img_wrapper
+                    width: 100%
+                    height: 200px
+                    overflow: hidden
+                    transition: all 0.3s ease-in-out
+                    .project_image
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                        transition: all 0.3s ease-out
         .other_projects_wrapper
             padding-bottom: 3.125rem
             margin-bottom: 3.125rem
