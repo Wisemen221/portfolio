@@ -39,7 +39,7 @@
                     { text: 'GITHUB' },
                     { text: 'FIGMA' },
                 ],
-                mycolor: '#'+(Math.random()*0xFFFFFF<<0).toString(16)
+                mycolor: '#2BC7D9'
             }
         }
     }
