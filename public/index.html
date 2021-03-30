@@ -75,8 +75,8 @@
     <script>
       let tl = gsap.timeline()
 
-      tl.to('.module',{scale: 1, duration: 0.8, delay: 1, ease: "elastic.out(1, 0.5)" })
-      .to('.box',{duration: 0.5, y: 0, stagger: 0.1, opacity: 1, delay: 0.3, ease: Back.easeInOut},'-=0.8')
+      tl.to('.module',{scale: 1, duration: 1, delay: 1, ease: "elastic.out(1, 0.5)" })
+      .to('.box',{duration: 0.8, y: 0, stagger: 0.1, opacity: 1, delay: 0.3, ease: Back.easeInOut},'-=0.8')
       .to('.top_wrapper',{duration: 0.5, marginLeft: 12 +'%', ease: Back.easeInOut},'-=0.4')
       .to('.bottom_wrapper',{duration: 0.5, marginLeft: 12 +'%', ease: Back.easeInOut},'-=0.4')
       .to('.title',{y: 0, opacity: 1, ease: Back.easeInOut},'-=0.4')
