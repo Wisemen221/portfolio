@@ -6,7 +6,8 @@
                 <div class="line_break"></div>
                 <section class="skills_section">
                     <div class="skills" v-for="todo in todos" :key="todo.text" :style="{ 'background-color': mycolor }">
-                        <h5>{{ todo.text }}</h5>
+                        <!-- <h5>{{ todo.text }}</h5> -->
+                        <div class="box" v-html="todo.text"></div>
                     </div>
                 </section>
             </div>
@@ -19,25 +20,24 @@
         data() {
             return {
                 todos: [
-                    { text: 'HTML' },
-                    { text: 'CSS' },
-                    { text: 'JAVASCRIPT' },
-                    { text: 'SASS' },
-                    { text: 'BOOTSTRAP' },
-                    { text: 'JQUERY' },
-                    { text: 'AJAX' },
-                    { text: 'JSON' },
-                    { text: 'VUE JS' },
-                    { text: 'NODE JS' },
-                    { text: 'WIREFRAMING' },
+                    { text: '<i class="fab fa-html5"></i>' },
+                    { text: '<i class="fab fa-css3-alt"></i>' },
+                    { text: '<i class="fab fa-js-square"></i>' },
+                    { text: '<i class="fab fa-sass"></i>' },
+                    { text: '<i class="fab fa-bootstrap"></i>' },
+                    { text: '<img class="jquery" src="/img/jquery_icon.82b1b0b7.svg" role="presentation">' },
+                    { text: '<img class="ajax" src="/img/ajax_icon.f7739e81.svg" role="presentation">' },
+                    { text: '<img class="json" src="/img/json_icon.8b38683e.svg" role="presentation">' },
+                    { text: '<i class="fab fa-vuejs"></i>' },
+                    { text: '<i class="fab fa-node-js"></i>' },
                     { text: 'UI/UX' },
                     { text: 'SEO' },
-                    { text: 'WORDPRESS' },
-                    { text: 'ADOBE Apps' },
-                    { text: 'DATABASE' },
-                    { text: 'GIT' },
-                    { text: 'GITHUB' },
-                    { text: 'FIGMA' },
+                    { text: '<i class="fab fa-wordpress"></i>' },
+                    { text: '<img class="jquery" src="/img/jquery_icon.82b1b0b7.svg" role="presentation">' },
+                    { text: '<i class="fas fa-database"></i>' },
+                    { text: '<i class="fab fa-git"></i>' },
+                    { text: '<i class="fab fa-github"></i>' },
+                    { text: '<i class="fab fa-figma"></i>' },
                 ],
                 mycolor: '#2BC7D9'
             }
